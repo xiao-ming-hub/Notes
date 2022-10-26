@@ -1,4 +1,5 @@
 # Notes - 存笔记的仓库（？）
+- [凸透镜成像规律](tu-tou-jing-cheng-xiang/note.md)
 - [命令行简介](commandline.md)
 - [Hello world](hello-world.md)
 - [在命令提示符里显示分支名](git-ps1.md)
