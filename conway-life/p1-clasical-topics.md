@@ -1,18 +1,10 @@
-# Conway's Game of Life: Mathematics and Construction 学习笔记 - SatNov12 2022
-> Free PDF. See <https://conwaylife.com/book> for pattern files and print version.
-
-记录专有名词和一些定理证明。
-1. Classical Topics 入门
-2. Circuitry and Logic 逻辑电路
-3. Constructions 结构
-
-## **Part I** - Classical Topics
+# **Part I** - Classical Topics - SatNov12 2022
 1. Early Life 生命游戏的早期发现
 2. Still Lifes 静物
 3. Oscillators 振荡器
 4. Spaceships and Moving Objects 移动物体
 
-### **Chapter 1**. Early Life
+## **Chapter 1**. Early Life
 1. Our First Technique: Random Fumbling <br/>
    介绍生命游戏的基本规则
 2. Common Evolutionary Sequences <br/>
@@ -131,7 +123,7 @@ Exercise 1.4 (a) `()` 表示活细胞，其余是空。
                       ()
 ```
 
-### **Chapter 2**. Still Lifes
+## **Chapter 2**. Still Lifes
 1. Strict and Pseudo Still Lifes 严格静物、伪静物
 2. Still Life Grammar 静物命名规则
 3. Eaters 吞噬者
@@ -213,7 +205,7 @@ M(n)=\begin{cases}
 > | $n\le27$  | Geoffrey Chu 等                                 | 2009  |
 > | 完整解法  | Geoffrey Chu 和 Peter J. Stuckey                | 2012  |
 
-### **Chapter 3**. Oscillators
+## **Chapter 3**. Oscillators
 1. Billiard Tables
 2. Stabilizing Corners
 3. Composite Periods and Sparks
@@ -223,7 +215,7 @@ M(n)=\begin{cases}
 7. Omniperiodicity
 8. Phoenices
 
-### **Chapter 4**. Spaceships and Moving Objects
+## **Chapter 4**. Spaceships and Moving Objects
 1. The Glider
 2. The Light, Middle, and Heavyweight Spaceships
 3. Corderships
