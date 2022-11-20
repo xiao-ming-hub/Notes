@@ -1,4 +1,4 @@
-# **Part I** - Classical Topics - SatNov12 2022
+# **Part I** - Classical Topics - 2022.11.12
 1. Early Life 生命游戏的早期发现
 2. Still Lifes 静物
 3. Oscillators 振荡器
@@ -58,10 +58,10 @@ switch engine 会把自己移动到另一个地方然后在原来那留下一堆
 > Generation $0$ refers to the starting configuration before applying the Life rules to it. Generation $1$ is the pattern that is obtained by applying the Life rules once, and generation $n$ is the pattern obtained by applying the Life rules $n$ times.
 
 第 $0$ 代是初始状态，对于 $n=1,2,3,...$，第 $n$ 代就是指第 $n-1$ 代迭代一次后的状态。
-> That is, does there exist a pattern that cannot ever appear in the evolution of any other pattern, but rather can only ever appear in generation 0? A pattern with this property is called a **Garden of Eden**.<br />
+> That is, does there exist a pattern that cannot ever appear in the evolution of any other pattern, but rather can only ever appear in generation 0? A pattern with this property is called a **Garden of Eden**.<br/>
 
 不存在 parent 的图案叫做 Garden of Eden。这个词来源于元胞自动机（**cellular automata**），在康威生命游戏提出前就存在了。
-> **定理 1.1** Garden of Eden 存在性。<br />
+> **定理 1.1** Garden of Eden 存在性。<br/>
 > 在康威生命游戏中必然存在 Garden of Eden。
 
 证明思路是，因为存在两个不同的图案，它们有着相同的 child，所以 Garden of Eden 必然存在。这个思路还有一些细节要考虑，比如说生命游戏的网格是无穷大的等。原书中的 $2^{36} − 1$ 要减一是因为已经找到了一组本身不同的、child 相同的图案（block 和 pre-block）。把 $-1$ 替换成 $-2$、$-3$ 都是可以的。练习 1.6 进一步探讨了这个证明（比如把 $6\times6$ 替换成 $5\times5$、$4\times4$ 证明还是否成立）。
@@ -108,21 +108,6 @@ Nicolay Beluchenko 提出了一种构造 Garden of Eden 的方法。思路是，
 
 第一章讲了一些结构的分类，以及一些结构的由来。即使是第一章，也讲了很多是目前国内的科普视频没有的内容（也可能是我没有找到，截至 2022.11.5）。
 
-Exercise 1.4 (a) `()` 表示活细胞，其余是空。
-```
-                      ()
-                    ()()
-                  ()()
-      () 1 2 3 4 5  ()()  ()() 1 2 3 4 5 6 7 8 9()
-  ()()()                                        ()()()
-()                                                    ()
-  ()()()                                        ()()()
-      ()            ()()  ()()                  ()
-                  ()()
-                    ()()
-                      ()
-```
-
 ## **Chapter 2**. Still Lifes
 1. Strict and Pseudo Still Lifes 严格静物、伪静物
 2. Still Life Grammar 静物命名规则
@@ -161,7 +146,7 @@ Exercise 1.4 (a) `()` 表示活细胞，其余是空。
 当通过在一条一细胞宽的路径周围放置结构时构成的静物称为 **induction coils**（感应线圈？）。
 > Deleting gliders is the simplest of these tasks, and it can be done with objects called **eaters**.
 
-能把滑翔机吃掉的图案叫 eater。通常用静物实现（震荡器也不是不可以）。下面这个东西较 **eater 1**，它在很早的时候就被很多爱好者以静物的身份发现了它，但它能吃掉滑翔机的性质是 1971 年 Bill Gosper 的小组在 MIT 发现的。它遇到滑翔机时经过 4 代就能恢复原样，所以称它有“**recovery time** of 4 generations”。
+能把滑翔机吃掉的图案叫 eater。通常用静物实现（振荡器也不是不可以）。下面这个东西较 **eater 1**，它在很早的时候就被很多爱好者以静物的身份发现了它，但它能吃掉滑翔机的性质是 1971 年 Bill Gosper 的小组在 MIT 发现的。它遇到滑翔机时经过 4 代就能恢复原样，所以称它有“**recovery time** of 4 generations”。
 ```
 ()()
 ()  ()
@@ -210,10 +195,65 @@ M(n)=\begin{cases}
 2. Stabilizing Corners
 3. Composite Periods and Sparks
 4. Hasslers and Shuttles
-5. Glider Loops and Reflectors
-6. Herschel Tracks
+5. Glider Loops and Reflectors 滑翔机循环、反射器
+6. Herschel Tracks<br/>
+   Herschel 轨道
 7. Omniperiodicity
 8. Phoenices
+
+> Recall that an oscillator is a pattern that returns to its initial phase after 2 or more generations, and the smallest number of generations required is its **period**.
+
+如果一个振荡器经过 $n\ge2$ 代后回到了原来的样子，满足条件的最小的 $n$ 是这个振荡器的**周期**。虽然可以把静物考虑成周期为 1 的振荡器，但在这本书里术语“振荡器”要求周期大于 1。“period $n$”可以缩写为“$\text pn$”，表示周期为 $n$。
+
+最古老、最简单的构造振荡器的方法之一是构造一个 **billiard table**：准备一个缺角的矩形，在矩形外放置感应线圈，在矩形里放一些碎片使它成为一个振荡器。实际上也不一定要矩形，使用其它封闭图形构造的做法也很常见。
+> In an oscillator, the cells that oscillate are called its **rotor** and the cells that stay alive for all generations are called its **stator**. A billiard table is thus an oscillator that has its rotor enclosed within its stator.
+
+在一个振荡器里，振荡的细胞叫做 rotor，振荡时不动的叫做 stator。以 billiard table 为例，矩形和外面的感应线圈是 stator，里面的东西是 rotor。
+
+另一种构造振荡器的方法是把已知的图案放在一起，比如在 1.3 节里构造的 queen bee shuttle。在 2.3 节里介绍的 eater 1 能吃很多东西。**two eaters** 是直接把两个 eater 1 放在一起构成的 p3 振荡器。一个可能的操作是用几个 eater 1 把一个图案围起来，把图案产生的垃圾清理掉。
+
+一个非常简单的构造某种周期的振荡器是把两个振荡器组合在一起，构成一个周期是它们周期的最小公倍数的振荡器。比如，把 blinker 和 pulsar 看成一个整体，就组成了一个周期为 $\text{lcm}(2,3)=6$ 的振荡器。但这个太平凡了，我们希望能把两个振荡器互相发生反应。某些图案燃烧时当时会撒出一些小颗粒，我们就能利用这些小颗粒让几个这些图案组成振荡器，它们既会互相干扰，又能保持振荡。这些小颗粒就像是接口，原书里称其为 **spark**；具有 spark(s) 的图案叫做 **sparker**。我们还可以给 sparks 分一下类。
+- domino spark：与外接矩形平行的两个独立出来的细胞；
+- pipsquirters：与外接矩形垂直的两个独立出来的细胞；
+- dot spark：单个独立出来的细胞；
+- finger spark：有单个连接（上下左右）的单个细胞；
+- thumb spark：有单个连接（左上、左下、右上、右下）的单个细胞；
+- duoplet：斜着连接的两个独立出来的细胞；
+- banana spark：见下图 `[]`。
+```
+banana spark[]
+        [][]
+```
+最后的两类能反射滑翔机，这个性质很重要。
+
+> We say that one pattern **hassles** another one if it repeatedly moves or changes it, typically in a periodic way so as to create an oscillator or gun.
+
+如果 A 平凡地移动或者更改 B，特别是以一种周期的方式创建振荡器或枪，那么我们认为 A **hassles** B。以这种方式构造出的振荡器叫做 **hassler**。特别地，当一个 hassler 两个方向往返移动某个物件时，这个 hassler 被称为 shuttle（比如 1.3 节讲到的 queen bee shuttle）。
+> This was the first p 23 oscillator found. Its name is a reference to the famous mathematician of the same name who published a list of 23 important unsolved (at that time) mathematical problems in 1900.
+
+有一个 p23 振荡器叫 **David Hilbert**，它是第一个发现的 p23 振荡器。用这个名字是因为这位数学家在 1900 年提出了 23 个重要的当时未解决的难题（希尔伯特 23 问）。
+> In particular, we would like to find a stationary pattern (i.e., a still life or an oscillator) with the property that if a glider hits it then the stationary pattern is unaffected and another glider is output in a different direction. Such a pattern is called a **reflector**.
+
+我们想找到一些站点图案（振荡器或静物），它能够改变击中它的滑翔机的方向。这些图案叫做 reflector。
+> How many generations are needed between subsequent gliders colliding with the reflector, which is called its **repeat time**.
+
+一个滑翔机撞上 reflector 后需要多少代才能让另一个滑翔机撞上，这被称为它的 repeat time。
+> Fortunately, faster stable reflectors are now known, with the smallest and fastest one being the **Snark**, with a repeat time of 43 generations.
+
+最小的、最快的 stable reflector 是 Snark。
+> The Snark was“almost”found by Dietrich Leithner sometime around 1998, but with the large unnamed still life at the right replaced by another block. In Leithner’s original pattern, the glider was still reflected 90 degrees, but the second block was deleted in the process. It wasn’t until about 15 years later, in April 2013, that the reflector was completed by Mike Playle, who wrote a custom search program to find a stable pattern that could replace the block and be unaffected by the reflection.
+
+1998 年的某天，Dietrich Leithner“几乎”发现了这个东西，但它只是作为未命名的静物和一个 block 存在。它能反射滑翔机，但反射之后这个东西会自毁。15 年后，在 2013 年 4 月，Mike Playle 使用计算机搜索 block 的正确位置，成功修复了这个 bug。
+> The name“Snark”comes from Lewis Carroll’s poem *The Hunting of the Snark*, in which ten characters try to hunt an imaginary animal bearing that name. Playle’s search program that found the Snark was similarly called *Bellman*, after one of the main characters in the poem.
+
+“Snark”来源与诗《The Hunting of the Snark》，其中十个角色试图猎杀 Snark（一种虚构动物）。而 Playle 写的那个搜索 Snark 的程序被称为 Bellman（诗中的主角之一）。
+> In order to actually be able to make use of a Herschel, we will need to find a pattern that it can interact with (called a **conduit**) so as to move it from one place to another, since left alone a Herschel will just explode.
+
+其实我们不一定要滑翔机循环，还可以用些别的东西做成循环。以 Herschel 为例，它的爆炸很随机。如果想要利用它构成循环，那么需要找到一个图案与 Herchel 发生反应，并且在另外一个地方生成 Herchel。否则，Herchel 会在爆炸中把自己弄没。concuit 就是我们需要的那一类东西，可以把它理解为广义的 reflector。
+> **定理 3.1** 多数周期大于等于 61 的 Herschel 轨道振荡器<br/>
+> $\forall p\in \mathbb Z\cap[0,+\infty],\ \exists k[(256+616k)\mid p]  \Leftrightarrow (p\mod11)(p\mod17)\ne0$。 包含 4 个 R64 conduit 和每边 $2k$ 个 Fx77 conduit（共 $8k$ 个）的方形 Herschel 轨道能构造任何周期大于等于 61 且不是 7 或 11 的倍数。
+
+注意到 $(256+616k)\mid p\Leftrightarrow\exists a\in\mathbb Z\cap[1,+\infty](pa=256+616k)$。问题转化为讨论什么样的 $p$ 能使得关于 $a$、$k$ 的方程 $pa-616k=256$ 有整数解。裴蜀定理（[定理 A.1](a-mathematical-miscellany.md)）告诉我们，当 $256\mid\gcd(p,616)$ 时有解。而 $616=2^3\times7\times11$，$256 = 2^8$，616 的质因数里 7、11 都不是 256 的质因数。所以，证毕。
 
 ## **Chapter 4**. Spaceships and Moving Objects
 1. The Glider
