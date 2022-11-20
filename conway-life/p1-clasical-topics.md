@@ -146,7 +146,7 @@ Nicolay Beluchenko 提出了一种构造 Garden of Eden 的方法。思路是，
 当通过在一条一细胞宽的路径周围放置结构时构成的静物称为 **induction coils**（感应线圈？）。
 > Deleting gliders is the simplest of these tasks, and it can be done with objects called **eaters**.
 
-能把滑翔机吃掉的图案叫 eater。通常用静物实现（振荡器也不是不可以）。下面这个东西较 **eater 1**，它在很早的时候就被很多爱好者以静物的身份发现了它，但它能吃掉滑翔机的性质是 1971 年 Bill Gosper 的小组在 MIT 发现的。它遇到滑翔机时经过 4 代就能恢复原样，所以称它有“**recovery time** of 4 generations”。
+能把滑翔机吃掉的图案叫 eater。通常用静物实现（振荡器也不是不可以）。下面这个东西叫 **eater 1**，它在很早的时候就被很多爱好者以静物的身份发现了它，但它能吃掉滑翔机的性质是 1971 年 Bill Gosper 的小组在 MIT 发现的。它遇到滑翔机时经过 4 代就能恢复原样，所以称它有“**recovery time** of 4 generations”。
 ```
 ()()
 ()  ()
