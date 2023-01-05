@@ -44,7 +44,7 @@ soup 是初始状态，ash 是“燃烧后的灰烬”。
 有两种滑翔机枪 (Glider gun)，一种是基于 queen bee 的 Gosper glider gun（queen bee shuttle），另一种是基于 twin bee 的 twin bees shuttle。
 > Just like the queen bee and twin bees, the **switch engine** leaves behind some debris and reappears later on in its evolution (this time after 48 generations), but in a different location and orientation. However, unlike the queen bee and twin bees, the switch engine does not return to its original position after repeating this reaction. Instead, the switch engine continually moves farther and farther away from where it started, just like a spaceship.
 
-switch engine 会把自己移动到另一个地方然后在原来那留下一堆垃圾。不同于 queen bee 和 twin bee，switch engine 不会掉头，它会越走越远。
+switch engine 会把自己移动到另一个地方并改变方向，然后在原来那留下一堆垃圾。不同于 queen bee 和 twin bee，switch engine 不会掉头，它会越走越远。
 > An object like this one, which moves but leaves periodic junk behind it, is called a **puffer**.
 
 移动时留下周期性的垃圾的结构叫做 puffer。
@@ -104,7 +104,7 @@ Nicolay Beluchenko 提出了一种构造 Garden of Eden 的方法。思路是，
   ()()  ()()()  ()    ()()      ()  ()()  ()()  ()()()  ()  ()()
 ()    ()      ()    []    ()()()    []    []    []    ()    []
 ```
-在早期（生命游戏刚提出的时候）并没有现成的软件（如现在的 Golly）去模拟生命游戏，所以那时的爱好者多数是在草稿纸上写或者用石头模拟生命游戏的。在这种条件下他们仍能发现许多有趣的结构，这种探索精神是值得我们去学习的。
+在早期（生命游戏刚提出的时候）并没有现成的软件（如现在的 Golly）去模拟生命游戏，所以那时的爱好者多数是在草稿纸上写或者用石头模拟生命游戏的。在这种条件下他们仍能发现许多有趣的结构，这种探索精神值得我们学习。
 
 第一章讲了一些结构的分类，以及一些结构的由来。即使是第一章，也讲了很多是目前国内的科普视频没有的内容（也可能是我没有找到，截至 2022.11.5）。
 
@@ -234,7 +234,7 @@ banana spark[]
 有一个 p23 振荡器叫 **David Hilbert**，它是第一个发现的 p23 振荡器。用这个名字是因为这位数学家在 1900 年提出了 23 个重要的当时未解决的难题（希尔伯特 23 问）。
 > In particular, we would like to find a stationary pattern (i.e., a still life or an oscillator) with the property that if a glider hits it then the stationary pattern is unaffected and another glider is output in a different direction. Such a pattern is called a **reflector**.
 
-我们想找到一些站点图案（振荡器或静物），它能够改变击中它的滑翔机的方向。这些图案叫做 reflector。
+我们想找到一些站点图案（振荡器或静物），它能够改变击中它的滑翔机的方向。这些图案叫做 reflector（反射者？）。
 > How many generations are needed between subsequent gliders colliding with the reflector, which is called its **repeat time**.
 
 一个滑翔机撞上 reflector 后需要多少代才能让另一个滑翔机撞上，这被称为它的 repeat time。
@@ -254,6 +254,26 @@ banana spark[]
 > $\forall p\in \mathbb Z\cap[0,+\infty],\ \exists k[(256+616k)\mid p]  \Leftrightarrow (p\mod11)(p\mod17)\ne0$。 包含 4 个 R64 conduit 和每边 $2k$ 个 Fx77 conduit（共 $8k$ 个）的方形 Herschel 轨道能构造任何周期大于等于 61 且不是 7 或 11 的倍数。
 
 注意到 $(256+616k)\mid p\Leftrightarrow\exists a\in\mathbb Z\cap[1,+\infty](pa=256+616k)$。问题转化为讨论什么样的 $p$ 能使得关于 $a$、$k$ 的方程 $pa-616k=256$ 有整数解。裴蜀定理（[定理 A.1](a-mathematical-miscellany.md)）告诉我们，当 $256\mid\gcd(p,616)$ 时有解。而 $616=2^3\times7\times11$，$256 = 2^8$，616 的质因数里 7、11 都不是 256 的质因数。所以，证毕。
+> return to the question that we have been dancing around for the entirety of this chapter: do there exist oscillators with all periods in Conway’s Game of Life? If so, then Life is said to be **omniperiodic**, and this omniperiodicity problem is one of its oldest and most well-studied questions.
+
+是否存在任意周期的振荡器？如果是的话，那么就认为生命游戏是 omniperiodic，我把它理解为全周期性。这个全周期性问题是最老的、研究最多的问题之一。目前周期为 19、34 和 41 的振荡器仍未找到。即使我们可以把周期为 2 的 blinker 和 周期为 17 的 honey thieves 看成一个周期为 34 的振荡器，但这个振荡器是“trivial”（平凡的）的，而我们想要的是“non-trivial”（不平凡的）振荡器。
+> ...all of its live cells die every generation, yet the pattern as a whole lives. A pattern with this property is called a **phoenix**, after the mythological bird that is cyclically reborn after dying.
+
+有一些图案，对于每一代，下一代里这一代的所有细胞都会死亡，同时又有新的细胞出生。这种图案就像神话中的凤凰，重复死亡、重生。我们把这种图案称为 phoenix（凤凰？）,下图就是一种。是否有某些更杂乱的图案也是凤凰，比如某些飞行器或者 puffers？定理 3.3 给出了否定回答。
+```
+      []..
+    ..[]..[]
+  []        ..
+....        [][]
+[][]        ....
+  ..        []
+    []..[]..
+        []
+```
+> **定理 3.3** 凤凰都是振荡器 <br/>
+> 不存在能不停拓展的凤凰，所以所有的凤凰都会演化成振荡器。
+
+> **定理 3.4** 不存在周期为 3 的凤凰
 
 ## **Chapter 4**. Spaceships and Moving Objects
 1. The Glider
@@ -262,3 +282,78 @@ banana spark[]
 4. Puffers and Rakes
 5. Speed Limits
 6. Speed and Period Status
+
+就像振荡器，定义飞行器的 **period**（周期） 是能使它迭代回原来形态的最小正周期数。飞行器的 **speed**（速度）与它每迭代一个周期移动的距离有关。生命游戏里速度的单位是 **speed of light**，符号是 c，代表一个细胞每代。比如，滑翔机周期是 4，每 4 代它会往对角方向移动一个细胞，所以它的速度是 c/4；LWSS 每 4 代水平移动 2 个单位，所以它的速度是 c/2。
+> The term **orthogonal** means straight left–right or up–down, as opposed to diagonal.
+
+与 diagonal（对角、斜着）不同，术语“orthogonal”是上下或者左右方向。
+
+因为找到从垃圾里找到新的基本飞行器太难了，所以这章会着重研究飞行器之间的反应。
+
+我们定义滑翔机的一个属性 **color**（色相？），或者叫 **parity**（奇偶性），是一个滑翔机在移动过程中不变的量。它的色相可以理解为，当某个滑翔机的状态达到下面四个之一时，`()` 处的细胞在平面直角坐标系中横、纵坐标之和的奇偶性。通常我们不会说一个滑翔机是奇还是偶，而是说某两个滑翔机的色相是否相同。
+```
+  []      []()  ()[][]  []
+    []  []  []  []      []  []
+[][]()      []    []    ()[]
+```
+如果某个反射者反射的滑翔机与输入的滑翔机色相相同，那么这个滑翔机就是 **color-preserving**（保色）reflector。相反地，如果改变，那么就是 **color-changing**（变色）reflector。
+
+另外两个量是 **lanes**（轨道）和 **timing**（时刻），它们都只同时考虑同向的滑翔机。这两个参数能明确、定量地指示两个滑翔机的相对位置。滑翔机的奇偶性等价于 lanes 的奇偶性。
+> Some spaceships, especially ones that emit accessible sparks, are capable of carrying other objects along with them as they move. Such objects are called **tagalongs**...
+
+有些能发射可用 sparks 的飞行器能在移动时带着别的对象，这些飞行器叫 tagalong（尾随物）。
+
+有一种图案能把 tub 变成 barge，然后 long barge，long long barge 等等，这种图案叫做 **tubstretcher**。更一般地，如果我们不考虑具有这种性质的图案拉伸的是什么，那么它就是 **wickstretcher**。而有一些尾随物是飞行器在后，前面有一坨东西的，这种尾随物叫 pushalongs。两个特别有用于 xWSS 的尾随物是 **Schick engine** 和 **Coe ship**，4.4 小节讨论了这两个东西。
+> ...we similarly distinguish between spaceships\* and **pseudo spaceships**, which are flotillae in which none of the component spaceships actually change their evolution at all, but at least one dead cell has more than 3 live neighbors in the flotilla but has fewer than 3 live neighbors when only one of the component spaceships is present.
+
+就像我们区分严格静物和伪静物一样，我们区分飞行器\*和伪飞行器。严格定义我就不翻了。
+> \*The term “strict spaceship” is not used in practice, and if the term “spaceship” is used unqualified then it is typically assumed that it cannot be broken down into smaller spaceships.
+
+\*在练习里“strict spaceship”不会出现，如果使用术语“spaceship”时没有特殊说明，那么假设它不能分割成更小的飞行器。
+
+也许我们能把一些飞行器放在一起，让它们互相干预，就像在 3.3 小节用 sparks 把 sparkers 放在一起那样。以这种方式创造的飞行器叫 flotillae（舰队）。
+> Since flotillae can be made up of multiple copies of any of these three standard c/2 orthogonal spaceships–LWSS, MWSS, or HWSS–it is often convenient to refer to any of these components as an **xWSS**. This term comes from the idea of “x” being an unknown, which can be replaced by one of the other letters, “L”, “M”, or “H”.
+
+我们把 LWSS，MWSS，HWSS 统称为 xWSS。
+> One way to construct flotillae that are a bit less trivial is to consider what might happen if we were to construct a spaceship that followed the same pattern as the light, middle, and heavyweight spaceships, but is even longer than the heavyweight spaceship, such as the one displayed in Figure 4.17. This object is called an **overweight spaceship** (or **OWSS** for short), but its name is deceiving—it is not actually a spaceship at all.
+
+一种没那么平凡地构造舰队的方法是构造 OWSS（超重飞行器），它是一种看着像飞行器、比 HWSS 更大的东西，但都不满足 spaceship 的定义。我们通常要在它周围放置一些东西来使它们成为飞行器。
+> Named after Charles Corderman, who discovered the switch engine and most of the simple puffers based on it in 1971.
+
+我们可以在 switch engine 后面添加 spaceship 来消除它产生的垃圾，从而构造飞行器。以这种方式构造出来的飞行器叫 Cordership。这个名字来源于 Charles Corderman，他在 1971 发现了 switch engine，和多数基于它的简单 puffer。
+
+4.4 小节再次提到了 puffers，所以这里也再次记录一下。类比之前的 Gosper glider gun，我们想要构造移动的“枪”，或者说，**rake**（扫射枪）。构造一个扫射枪有两步：
+1.  我们构造一个会留下垃圾的飞船，即曾经提到的 **puffers**；
+2.  添加 xWSS 把垃圾变成滑翔机。
+
+发射向前的滑翔机的扫射枪叫做 **forward space rake**，而发射向后的叫 **backward space rake**。
+
+有时已有的扫射枪发射频率太快了，我们希望能删除一些滑翔机来降低发射频率，而 **Schick engine** 就能完成这一任务。
+> **定理 4.1** 飞船速度极限<br/>
+> 水平（斜向）飞行的有限飞船的最大速度是 c/2（c/4）。
+
+这个定理由康威自己在简短地介绍生命游戏后证明。
+
+定理 4.1 只是考虑在 **vacuum**（真空，即死细胞的空间）中移动，而如果在其它介质的情况则会有所不同，甚至达到光速。在这类非空介质中的移动物体叫 **signal**（信号；有时在真空中的也可叫做信号，比如滑翔机，也能在两个位置建立通信），而它移动的空间叫 **wire**（导线）。下面的这种导线叫 Zebra Stripes（斑马线）。
+```
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+```
+> **定理 4.2** 平行斑马线速度极限 <br/>
+> 方向与斑马线平行的有限移动物体速度都是 c。
+
+为了利用信号，我们需要能创建信号的 **source**（信号源）、接受（摧毁）信号的 **sink**，还有能改变传播方向（甚至转换信号、连接不同介质）的 **signal elbow**。它们都能分别类比为滑翔机枪、eater 和 reflector。
+> **定理 4.3** 垂直斑马线的速度极限 <br/>
+> 方向垂直于斑马线的有限移动物体速度最大值是 2c/3。
+
+> ...it is also possible for objects to pass through wires and destroy the wire in the process. When this happens, the wire is instead called a wick, and the objects that “burns” through the **wick** is called a **fuse**.
+
+有些东西会穿过一条线，然后摧毁这条线。这种东西是 **fuse**（保险丝；导火线；引信），而 **wick**（灯芯；烛芯）是这条线。
+
+4.5.3 Teleportation 讲的是一种“传送”飞行物的技术。它让飞行物撞上其它的东西，经过足够短的时间，在新的位置生成一个一样的飞行物，看上去就像加速飞行了一样。注意因为生命游戏规则的限制，这并没有超光速。**fast forward force field** 就是一个例子。但这种技术难以用于构造电路，因为很难在这么小的空间里稳定制造这么多东西，如果有的话，这些电路会变得很大。
+> ...are called **knightships**, in reference to the knight from chess that moves in the same way. This particular knightship is called **Sir Robin**, after a knight from Monty Python.
+
+存在飞行方向不是平行于网格或对角线方向的飞船（即路径斜率不是±1）。这种飞船叫 **oblique spaceship**（倾斜的飞船？）。我们规定每 $n$ 代水平移动 $x$ 格、纵向移动 $y$ 格的飞船的速度是 $(x,y)c/n$。因为斜着移动的飞船速度慢，所以特别难找。但还是有人找到了，比如说 Adam P. Goucher 在 2018 年 3 月基于 Tomas Rokicki 发现的 partial spaceship（部分的飞船？），构造出 **Sir Robin**。它是一个 $(2,1)c/6$ 的飞船；速度与这相同的飞船叫做 **knightships**，参考国际象棋里移动方式与这相同的棋子 knight（骑士？）。
