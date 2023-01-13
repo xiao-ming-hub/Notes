@@ -13,6 +13,17 @@
 6. A Gosper Glider Gun Breeder
 7. Slow Salvo Synthesis
 
+LWSS 的 **3-glider synthesis**（三滑翔机反应）就是三个滑翔机撞在一起产生一个 LWSS 的反应。我们研究的滑翔机反应要求滑翔机能来自任意远的地方，如这种就不是合法的滑翔机碰撞，因为滑翔机在到达这种状态前就会相撞。
+```
+                []
+                  []
+              [][][]
+  []
+    []      []
+[][][]  [][]
+          [][]
+```
+
 ## **Chapter 6**. Periodic Circuitry
 1. Period 30 Circuitry
 2. Primer
