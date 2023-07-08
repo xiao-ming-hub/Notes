@@ -2,6 +2,7 @@
 github: <https://github.com/xiao-ming-hub/Notes>
 
 数学公式问题挺大，但我不打算解决这个问题，也许可以看看隔壁 [gitee](https://gitee.com/a_Txy/Notes)？
+- [CSP-J 2022 T3 逻辑表达式](csp-j_2022t3.md)
 - [凸透镜成像规律](tu-tou-jing-cheng-xiang/note.md)
 - [命令行简介](commandline.md)
 - [Hello world](hello-world.md)
