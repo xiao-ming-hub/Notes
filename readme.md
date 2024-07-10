@@ -3,7 +3,7 @@ github: <https://github.com/xiao-ming-hub/Notes>
 
 数学公式问题挺大，但我不打算解决这个问题，也许可以看看隔壁 [gitee](https://gitee.com/a_Txy/Notes)？
 - [排列组合 球盒问题 把 $n$ 个球放进 $m$ 个盒子的方案数]()
-- [NOIP 2018 普及组初赛 程序完善 T2]()
+- [NOIP 2018 普及组初赛 程序完善 T2](noip2018j1t23.md)
 - [NOIP 2017 普及组 棋盘](noip2017/doc.md)
 - [CSP-J 2022 T3 逻辑表达式](csp-j_2022t3.md)
 - [凸透镜成像规律](tu-tou-jing-cheng-xiang/note.md)
