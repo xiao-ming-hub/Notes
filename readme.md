@@ -5,6 +5,7 @@ github: <https://github.com/xiao-ming-hub/Notes>
 - [命令行简介](commandline.md)
 - [在命令提示符里显示分支名](git-ps1.md)
 - OI 题解
+  - [手写线段树指南](segment-tree.md)
   - [最长上升子序列](lis-print.md)
   - [NOIP 2018 普及组初赛 程序完善 T2](noip2018j1t23.md)
   - [NOIP 2017 普及组 棋盘](noip2017/doc.md)
