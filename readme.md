@@ -5,6 +5,7 @@ github: <https://github.com/xiao-ming-hub/Notes>
 - [命令行简介](commandline.md)
 - [在命令提示符里显示分支名](git-ps1.md)
 - OI 题解
+  - [SCOI 2007 降雨量](scoi2007-raindrops.md)
   - [ZJOI 2006 皇帝的烦恼](zjoi2006-bs-dp.md)
   - [手写线段树指南](segment-tree.md)
   - [最长上升子序列](lis-print.md)
