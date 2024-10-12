@@ -5,6 +5,7 @@ github: <https://github.com/xiao-ming-hub/Notes>
 - [命令行简介](commandline.md)
 - [在命令提示符里显示分支名](git-ps1.md)
 - OI 题解
+  - [Luogu P11144 CRT](luogu11144.md)
   - [春季测试 2023 (VC) 总结](contest102679.md)
   - [文明 CRT+线性方程组](civilization.md)
   - [NOIP Round #6](poj-1390.md)
