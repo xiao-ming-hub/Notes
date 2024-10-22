@@ -5,6 +5,7 @@ github: <https://github.com/xiao-ming-hub/Notes>
 - [命令行简介](commandline.md)
 - [在命令提示符里显示分支名](git-ps1.md)
 - OI 题解
+  - [水杯降温 二分 不等式](luogu11189.md)
   - [Luogu P11144 CRT](luogu11144.md)
   - [春季测试 2023 (VC) 总结](contest102679.md)
   - [文明 CRT+线性方程组](civilization.md)
