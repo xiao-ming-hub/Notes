@@ -5,11 +5,11 @@ github: <https://github.com/xiao-ming-hub/Notes>
 - [命令行简介](commandline.md)
 - [在命令提示符里显示分支名](git-ps1.md)
 - OI 题解
+  - [抉择 dp 子序列枚举](poj21792.md)
   - [水杯降温 二分 不等式](luogu11189.md)
   - [Luogu P11144 CRT](luogu11144.md)
   - [春季测试 2023 (VC) 总结](contest102679.md)
   - [文明 CRT+线性方程组](civilization.md)
-  - [NOIP Round #6](poj-1390.md)
   - [树形 DP 细节](dp-tree.md)
   - [CSP2023T3 结构体 模拟题代码规范](csp-s_2023t3.md)
   - [Luogu P1438 二阶前缀和](luogu1438.boring_sequence.md)
