@@ -17,7 +17,9 @@ github: <https://github.com/xiao-ming-hub/Notes>
     - [降雨量 | 模拟/分类讨论](luogu.p2471.md)
     - [逻辑表达式 | 模拟 表达式解析](luogu.p8815.md)
   - 比赛总结
-    - [春季测试 2023 (VC)](contest102679.md)
+    - [CSP-S 2024 模拟 1](contest.x1.md)
+    - [SCP 2024 S](contest.200849.md)
+    - [春季测试 2023 (VC)](contest.102679.md)
   - 算法、模板
     - [dp/树形](dp-tree.md)
     - [dp/最长上升子序列](lis-print.md)
