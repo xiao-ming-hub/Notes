@@ -1,5 +1,5 @@
 # 降雨量 | 模拟/分类讨论 - ThuAug8 2024
-[LuoguP2471](https://www.luogu.com.cn/problem/P2471)：设 u 和 v 是两个年份 (u < v)，对于某一年x，用 r(x) 表示这年的降雨量。定义 P(u, v) 表示 “v 年是自 u 年以来降雨量最多的”。形式化地，P(u, v) 为真仅当：
+[Luogu P2471](https://www.luogu.com.cn/problem/P2471)：设 u 和 v 是两个年份 (u < v)，对于某一年x，用 r(x) 表示这年的降雨量。定义 P(u, v) 表示 “v 年是自 u 年以来降雨量最多的”。形式化地，P(u, v) 为真仅当：
 1. $r(u) \ge r(v)$
 2. $\forall w,\ u<w<v\Rightarrow r(w)<r(v)$
 

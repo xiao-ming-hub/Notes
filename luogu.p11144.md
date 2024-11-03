@@ -1,5 +1,5 @@
 # Strange Madoka Game | CRT/伪高精度 - SatOct12 2024
-称之为伪高精，是因为这用较低常数稍微扩充了的变量范围。它的范围仍然有限，只不过做到了 `long long` 差一点点就能做到的事，如 [BZOJ 2854](civilization.md)。
+称之为伪高精，是因为这用较低常数稍微扩充了的变量范围。它的范围仍然有限，只不过做到了 `long long` 差一点点就能做到的事，如 [BZOJ 2854](bzoj.2854.md)。
 
 [Luogu P11144](luogu.com.cn/problem/P11144) 交互题，每次询问给定整数 $m$，回答 $x\bmod m$，最多用 2 次询问求得 $x$。
 
