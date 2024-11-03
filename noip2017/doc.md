@@ -1,5 +1,7 @@
-# [NOIP2017 普及组] 棋盘 - WedJul19 2023
-[提交记录](https://www.luogu.com.cn/record/list?pid=P3956&user=477758) [题目传送门](https://www.luogu.com.cn/problem/P3956)
+# 棋盘 | 最短路/实现细节 - WedJul19 2023
+- [提交记录](https://www.luogu.com.cn/record/list?pid=P3956&user=477758) 
+- [Luogu P3956](https://www.luogu.com.cn/problem/P3956)
+
 主要讲讲从 5 分到 100 分的变化。
 | 时间           | 状态       | 分数 |
 | -------------- | ---------- | ---- |

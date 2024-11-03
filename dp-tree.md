@@ -1,4 +1,4 @@
-# 树形 DP 细节 - TueAug20 2024
+# dp/树形 - TueAug20 2024
 与其说是树形 DP，不如说动态物品背包。毕竟这两道题太平凡了。
 
 ## [HAOI2015](https://www.luogu.com.cn/problem/P3177) 树上染色
