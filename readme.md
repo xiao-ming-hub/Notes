@@ -5,6 +5,7 @@ github: <https://github.com/xiao-ming-hub/Notes>
 - [命令行简介](commandline.md)
 - [在命令提示符里显示分支名](git-ps1.md)
 - OI 题解
+  - [反回文串 构造](luogu11190.md)
   - [抉择 dp 子序列枚举](poj21792.md)
   - [水杯降温 二分 不等式](luogu11189.md)
   - [Luogu P11144 CRT](luogu11144.md)
