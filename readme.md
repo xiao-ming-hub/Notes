@@ -11,7 +11,7 @@ github: <https://github.com/xiao-ming-hub/Notes>
     - [无聊的数列 | 树状数组/二阶前缀和](luogu.p1438.md)
     - [抉择 | dp/子序列](poj.21792.md)
     - [皇帝的烦恼 | dp/容斥原理 二分](luogu.p4409.md)
-    - [NOIP 2018 J1 T23 | 双向链表](noip2018j1t23.md)
+    - [NOIP 2018 J1 T23 | 双向链表 单调队列](noip2018j1t23.md)
     - [棋盘 | 最短路/实现细节](luogu.p3956/doc.md)
     - [结构体 | 模拟/代码规范](luogu.p9754.md)
     - [降雨量 | 模拟/分类讨论](luogu.p2471.md)
