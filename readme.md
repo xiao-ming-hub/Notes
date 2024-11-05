@@ -3,7 +3,9 @@ github: <https://github.com/xiao-ming-hub/Notes>
 
 数学公式问题挺大，但我不打算解决这个问题，也许可以看看隔壁 [gitee](https://gitee.com/a_Txy/Notes)？
 - OI
+  - [已 AC](exercises.md)
   - 题解
+    - [轮换式 | 数学/整式](luogu.p5084.md)
     - [反回文串 | 构造](luogu.p11190.md)
     - [水杯降温 | 不等式 二分](luogu.p11189.md)
     - [Strange Madoka Game | CRT/伪高精度](luogu.p11144.md)

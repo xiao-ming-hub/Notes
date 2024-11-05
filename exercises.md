@@ -6,7 +6,7 @@
     - [货车运输](https://www.luogu.com.cn/problem/P1967) MST
 - 贪心
   - [模拟工厂](https://www.luogu.com.cn/problem/P3161) 枚举
-  - [Strange Train Game](https://www.luogu.com.cn/problem/P11146) 反悔贪心
+  - [Strange Train Game](https://www.luogu.com.cn/problem/P11146) 反悔贪心 还有一些区间到图的转换思想
 - hash
   - [星战](https://www.luogu.com.cn/problem/P8819)
 - dp
@@ -47,16 +47,20 @@
   - 数论
     - [最大公约数和最小公倍数问题](https://www.luogu.com.cn/problem/P1029)
       > $xy=pq$，在 $pq$ 的因子里枚举。
-  - [CRT](https://www.luogu.com.cn/problem/P1495)
-    - [Strange Madoka Game](luogu.p11144.md) 伪高精度
+    - [CRT](https://www.luogu.com.cn/problem/P1495)
+      - [Strange Madoka Game](luogu.p11144.md) 伪高精度
   - 线性方程组
     - [文明](bzoj.2854.md) CRT
   - 容斥原理
     - [皇帝的烦恼](luogu.p4409.md) dp 二分
+  - 整式
+    - [轮换式](luogu.p5084.md)
 - 高精度
   - [阶乘之和](https://www.luogu.com.cn/problem/P1009)
 - 基础算法
-  - [水杯降温](luogu.p11189.md) 不等式 二分 差分
+  - 二分
+    - [水杯降温](luogu.p11189.md) 不等式 差分
+    - [Widespread](https://atcoder.jp/contests/abc063/tasks/arc075_b)
 
 - todo
   - [乒乓球](https://www.luogu.com.cn/problem/P1042)
