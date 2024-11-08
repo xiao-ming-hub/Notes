@@ -1,4 +1,6 @@
 # 做题记录
+很多题会综合运用几种算法，我把它归到思维难度（对于这道题，而不是知识点本身）最大的那一类里。
+
 - 图
   - 最短路
     - [棋盘](luogu.p3956/doc.md) 实现细节
@@ -11,17 +13,24 @@
   - [星战](https://www.luogu.com.cn/problem/P8819)
 - dp
   - 初步
+    - 背包/01
+      - [采药](https://www.luogu.com.cn/problem/P1048)
     - [过河卒](https://www.luogu.com.cn/problem/P1002)
     - [染色](https://www.luogu.com.cn/problem/P11233)
+    - [装箱问题](https://www.luogu.com.cn/problem/P1049)
   - 状态压缩
     - [互不侵犯](https://www.luogu.com.cn/problem/P1896) 轮廓线
   - 子序列
     - [抉择](poj.21792.md)
-  - 优化/单调队列
-    - [股票交易](https://www.luogu.com.cn/problem/P3161)
+  - 优化
+    - 单调队列
+      - [股票交易](https://www.luogu.com.cn/problem/P3161)
+    - 线段树
+      - [杂赛选比](https://www.luogu.com.cn/problem/P10381) 只是用来优化最值
 - 数据结构
   - 单调队列
     - [NOIP 2018 J1 T23](noip2018j1t23.md) 双向链表也可以做
+    - [Patrik 音乐会的等待](https://www.luogu.com.cn/problem/P1823)
   - 树状数组
     - 二阶前缀和
       - [无聊的数列](luogu.p1438.md)
@@ -34,6 +43,7 @@
   - [结构体](luogu.p9754.md) 代码规范
   - [降雨量](luogu.p2471.md) 分类讨论
   - [逻辑表达式](luogu.p8815.md) 表达式解析
+  - [多项式输出](https://www.luogu.com.cn/problem/P1067)
 - 构造
   - [反回文串](luogu.p11190.md)
   - [均分纸牌](https://www.luogu.com.cn/problem/P1031)
@@ -55,27 +65,22 @@
     - [皇帝的烦恼](luogu.p4409.md) dp 二分
   - 整式
     - [轮换式](luogu.p5084.md)
+  - 组合计数
+    - Catalan 数
+      - [栈](https://www.luogu.com.cn/problem/P1044)
+    - 加法/乘法原理
+      - [A-B 数对](https://www.luogu.com.cn/problem/P1102)
 - 高精度
   - [阶乘之和](https://www.luogu.com.cn/problem/P1009)
 - 基础算法
   - 二分
     - [水杯降温](luogu.p11189.md) 不等式 差分
+    - [种树](https://www.luogu.com.cn/problem/P9755)
     - [Widespread](https://atcoder.jp/contests/abc063/tasks/arc075_b)
+  - 倍增
+    - [64位整数乘法](https://www.luogu.com.cn/problem/P10446)
 
 - todo
-  - [乒乓球](https://www.luogu.com.cn/problem/P1042)
-  - [栈](https://www.luogu.com.cn/problem/P1044)
-  - [采药](https://www.luogu.com.cn/problem/P1048)
-  - [装箱问题](https://www.luogu.com.cn/problem/P1049)
-  - [ISBN 号码](https://www.luogu.com.cn/problem/P1055)
-  - [开心的金明](https://www.luogu.com.cn/problem/P1060)
-  - [多项式输出](https://www.luogu.com.cn/problem/P1067)
-  - [分数线划定](https://www.luogu.com.cn/problem/P1068)
-  - [字符串的展开](https://www.luogu.com.cn/problem/P1098)
-  - [A-B 数对](https://www.luogu.com.cn/problem/P1102)
-  - [最大子段和](https://www.luogu.com.cn/problem/P1115)
-  - [车厢重组](https://www.luogu.com.cn/problem/P1116)
-  - [填涂颜色](https://www.luogu.com.cn/problem/P1162)
   - [小A点菜](https://www.luogu.com.cn/problem/P1164)
   - [日志分析](https://www.luogu.com.cn/problem/P1165)
   - [排序](https://www.luogu.com.cn/problem/P1177)
@@ -133,7 +138,6 @@
   - [Knapsack 1](https://www.luogu.com.cn/problem/AT_dp_d)
   - [Grid 1](https://www.luogu.com.cn/problem/AT_dp_h)
   - [栈](https://www.luogu.com.cn/problem/B3614)
-  - [直播获奖](https://www.luogu.com.cn/problem/P7072)
   - [分糖果](https://www.luogu.com.cn/problem/P7909)
   - [队列](https://www.luogu.com.cn/problem/B3616)
   - [Binary search](https://www.luogu.com.cn/problem/P8481)
@@ -146,7 +150,6 @@
   - [词典](https://www.luogu.com.cn/problem/P9868)
   - [密码锁](https://www.luogu.com.cn/problem/P9752)
   - [填幻方](https://www.luogu.com.cn/problem/B3940)
-  - [64位整数乘法](https://www.luogu.com.cn/problem/P10446)
   - [Strange Cake Game](https://www.luogu.com.cn/problem/P11143)
   - [快速读入](https://www.luogu.com.cn/problem/P10815)
   - [决斗](https://www.luogu.com.cn/problem/P11231)
@@ -287,7 +290,6 @@
   - [生日蛋糕](https://www.luogu.com.cn/problem/P1731)
   - [宝物筛选](https://www.luogu.com.cn/problem/P1776)
   - [黑匣子](https://www.luogu.com.cn/problem/P1801)
-  - [Patrik 音乐会的等待](https://www.luogu.com.cn/problem/P1823)
   - [阅览室](https://www.luogu.com.cn/problem/P1844)
   - [石子合并](https://www.luogu.com.cn/problem/P1880)
   - [团伙](https://www.luogu.com.cn/problem/P1892)
@@ -369,4 +371,3 @@
   - [圣诞树](https://www.luogu.com.cn/problem/P9119)
   - [消消乐](https://www.luogu.com.cn/problem/P9753)
   - [结构体](https://www.luogu.com.cn/problem/P9754)
-  - [种树](https://www.luogu.com.cn/problem/P9755)
