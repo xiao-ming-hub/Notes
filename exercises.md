@@ -9,6 +9,7 @@
 - 贪心
   - [模拟工厂](https://www.luogu.com.cn/problem/P3161) 枚举
   - [Strange Train Game](https://www.luogu.com.cn/problem/P11146) 反悔贪心 还有一些区间到图的转换思想
+  - [The Enchanted Forest](https://codeforces.com/problemset/problem/1687/A)
 - hash
   - [星战](https://www.luogu.com.cn/problem/P8819)
 - dp
@@ -22,21 +23,31 @@
     - [互不侵犯](https://www.luogu.com.cn/problem/P1896) 轮廓线
   - 子序列
     - [抉择](poj.21792.md)
+    - [最长上升子序列 LIS](lis-print.md)
+  - 树
+    - [dp/树形](dp-tree.md)
   - 优化
-    - 单调队列
+    - [单调队列](https://www.luogu.com.cn/problem/P1886)
       - [股票交易](https://www.luogu.com.cn/problem/P3161)
     - 线段树
       - [杂赛选比](https://www.luogu.com.cn/problem/P10381) 只是用来优化最值
 - 数据结构
+  - 链表
+    - [Two Teams](http://codeforces.com/problemset/problem/1154/E)3
   - 单调队列
-    - [NOIP 2018 J1 T23](noip2018j1t23.md) 双向链表也可以做
+    - [NOIP 2018 J1 T23](noip2018j1t23.md) 双向链表也可以做，但这个做法更通用
     - [Patrik 音乐会的等待](https://www.luogu.com.cn/problem/P1823)
   - 树状数组
     - 二阶前缀和
       - [无聊的数列](luogu.p1438.md)
   - [线段树](segment-tree.md)
+    - [Sasha and Array](https://codeforces.com/problemset/problem/718/C)
   - 扫描线
     - [矩形周长](https://www.luogu.com.cn/problem/P1856)
+  - `std::set` / 平衡树
+    - [报表统计](https://www.luogu.com.cn/problem/P1110) 代码细节想了很久
+  - `std::priorirty_queue` / 堆
+    - [Multiplication Table](http://codeforces.com/problemset/problem/448/D)
 - 模拟
   - [侦探推理](https://www.luogu.com.cn/problem/P1039)
   - [Mayan 游戏](https://www.luogu.com.cn/problem/P1312)
@@ -45,20 +56,36 @@
   - [逻辑表达式](luogu.p8815.md) 表达式解析
   - [多项式输出](https://www.luogu.com.cn/problem/P1067)
 - 构造
+  - 周期相关
+    - [Vika and Price Tags](https://codeforces.com/problemset/problem/1848/C)
+    - [Sequence of points](https://codeforces.com/problemset/problem/24/C)
   - [反回文串](luogu.p11190.md)
   - [均分纸牌](https://www.luogu.com.cn/problem/P1031)
     > 1.  算平均数；
     > 1.  求每堆纸牌与平均数的关系（多1记为1，少1记为-1）；
-    > 1.  允许纸牌数量为负数情况下强行从右边的拿。
+    > 1.  允许纸牌数量为负数情况下强行从右边的拿（可撤销贪心）。
+  - [Sherlock and his girlfriend](http://codeforces.com/problemset/problem/776/B) 质数一个色，合数一个色。
+  - [Vladik and fractions](http://codeforces.com/problemset/problem/743/C) $\frac2n=\frac1n+\frac1{n+1}+\frac1{n(n+1)}$
+  - [Milena and Admirer](https://codeforces.com/problemset/problem/1898/B)
+  - [Coloring Edges](https://codeforces.com/problemset/problem/1217/D)
+    > 每一个环上一定含有在与不在 DAG 上的两种边。DAG 一种颜色，其它边另一种颜色即可。没有环的话直接全部同色，有环时拓扑序可以任意规定。
+    >
+    > 无重边的无向图里 DAG 对应生成树，每一个环一定经过树边和非树边。有重边情况就多了。
 - 搜索
   - [靶形数独](https://www.luogu.com.cn/problem/P1074)
   - [小木棍](https://www.luogu.com.cn/problem/P1120)
+  - [最大公约数](https://www.luogu.com.cn/problem/P7243) 纯粹的 BFS
+  - [生日蛋糕](https://www.luogu.com.cn/problem/P1731) 经典剪枝，剪一下多 10 分。
 - 数学
   - 数论
-    - [最大公约数和最小公倍数问题](https://www.luogu.com.cn/problem/P1029)
-      > $xy=pq$，在 $pq$ 的因子里枚举。
+    - GCD
+      - [最大公约数和最小公倍数问题](https://www.luogu.com.cn/problem/P1029)
+        > $xy=pq$，在 $pq$ 的因子里枚举。
+      - [Row GCD](https://codeforces.com/problemset/problem/1458/A)
     - [CRT](https://www.luogu.com.cn/problem/P1495)
       - [Strange Madoka Game](luogu.p11144.md) 伪高精度
+    - 勾股数
+      - [Triangle](https://codeforces.com/problemset/problem/407/A)
   - 线性方程组
     - [文明](bzoj.2854.md) CRT
   - 容斥原理
@@ -79,6 +106,7 @@
     - [Widespread](https://atcoder.jp/contests/abc063/tasks/arc075_b)
   - 倍增
     - [64位整数乘法](https://www.luogu.com.cn/problem/P10446)
+    - [Xor-Paths](https://codeforces.com/problemset/problem/1006/F) 和算序列里和为定值的数对做法相同
 
 - todo
   - [小A点菜](https://www.luogu.com.cn/problem/P1164)
@@ -195,7 +223,6 @@
   - [素数密度](https://www.luogu.com.cn/problem/P1835)
   - [A % B Problem](https://www.luogu.com.cn/problem/P1865)
   - [EKO / 砍树](https://www.luogu.com.cn/problem/P1873)
-  - [滑动窗口 /单调队列](https://www.luogu.com.cn/problem/P1886)
   - [逆序对](https://www.luogu.com.cn/problem/P1908)
   - [郁闷的记者](https://www.luogu.com.cn/problem/P1960)
   - [无线通讯网](https://www.luogu.com.cn/problem/P1991)
@@ -231,13 +258,9 @@
   - [图的遍历](https://www.luogu.com.cn/problem/P3916)
   - [最大食物链计数](https://www.luogu.com.cn/problem/P4017)
   - [消失之物](https://www.luogu.com.cn/problem/P4141)
-  - [Sherlock and his girlfriend](https://www.luogu.com.cn/problem/CF776B)
-  - [Vladik and fractions](https://www.luogu.com.cn/problem/CF743C)
-  - [Multiplication Table](https://www.luogu.com.cn/problem/CF448D)
   - [单源最短路径（标准版）](https://www.luogu.com.cn/problem/P4779)
   - [铺设道路](https://www.luogu.com.cn/problem/P5019)
   - [简单题](https://www.luogu.com.cn/problem/P5057)
-  - [Two Teams](https://www.luogu.com.cn/problem/CF1154E)
   - [单调栈](https://www.luogu.com.cn/problem/P5788)
   - [Xor Sum 4](https://www.luogu.com.cn/problem/AT_abc147_d)
   - [Vacation](https://www.luogu.com.cn/problem/AT_dp_c)
@@ -249,8 +272,6 @@
   - [Slimes](https://www.luogu.com.cn/problem/AT_dp_n)
   - [Cows on Skates G](https://www.luogu.com.cn/problem/P6207)
   - [包子凑数](https://www.luogu.com.cn/problem/P8646)
-  - [最大公约数](https://www.luogu.com.cn/problem/P7243)
-  - [Eastern Exhibition](https://www.luogu.com.cn/problem/CF1486B)
   - [兔已着陆](https://www.luogu.com.cn/problem/P7870)
   - [网络连接](https://www.luogu.com.cn/problem/P7911)
   - [报数](https://www.luogu.com.cn/problem/P7960)
@@ -262,7 +283,6 @@
   - [E-梅莉的市场经济学](https://www.luogu.com.cn/problem/P8873)
   - [原神](https://www.luogu.com.cn/problem/P9228)
   - [Shift vs. CapsLock](https://www.luogu.com.cn/problem/AT_abc303_d)
-  - [Milena and Admirer](https://www.luogu.com.cn/problem/CF1898B)
   - [Strange Madoka Game](https://www.luogu.com.cn/problem/P11144)
   - [方格取数](https://www.luogu.com.cn/problem/P1004)
   - [传纸条](https://www.luogu.com.cn/problem/P1006)
@@ -287,7 +307,6 @@
   - [关押罪犯](https://www.luogu.com.cn/problem/P1525)
   - [乌龟棋](https://www.luogu.com.cn/problem/P1541)
   - [序列合并](https://www.luogu.com.cn/problem/P1631)
-  - [生日蛋糕](https://www.luogu.com.cn/problem/P1731)
   - [宝物筛选](https://www.luogu.com.cn/problem/P1776)
   - [黑匣子](https://www.luogu.com.cn/problem/P1801)
   - [阅览室](https://www.luogu.com.cn/problem/P1844)
@@ -332,16 +351,13 @@
   - [Candies](https://www.luogu.com.cn/problem/AT_dp_m)
   - [表达式](https://www.luogu.com.cn/problem/P7073)
   - [方格取数](https://www.luogu.com.cn/problem/P7074)
-  - [Row GCD](https://www.luogu.com.cn/problem/CF1458A)
   - [小熊的果篮](https://www.luogu.com.cn/problem/P7912)
   - [廊桥分配](https://www.luogu.com.cn/problem/P7913)
-  - [The Enchanted Forest](https://www.luogu.com.cn/problem/CF1687A)
   - [点双连通分量](https://www.luogu.com.cn/problem/P8435)
   - [边双连通分量](https://www.luogu.com.cn/problem/P8436)
   - [逻辑表达式](https://www.luogu.com.cn/problem/P8815)
   - [商务旅行](https://www.luogu.com.cn/problem/P8855)
   - [幂次](https://www.luogu.com.cn/problem/P9118)
-  - [Vika and Price Tags](https://www.luogu.com.cn/problem/CF1848C)
   - [商店砍价](https://www.luogu.com.cn/problem/P11188)
   - [三值逻辑](https://www.luogu.com.cn/problem/P9869)
   - [超速检测](https://www.luogu.com.cn/problem/P11232)
@@ -358,13 +374,10 @@
   - [卢卡斯定理/Lucas 定理](https://www.luogu.com.cn/problem/P3807)
   - [球形空间产生器](https://www.luogu.com.cn/problem/P4035)
   - [麻将](https://www.luogu.com.cn/problem/P4050)
-  - [Sequence of points](https://www.luogu.com.cn/problem/CF24C)
   - [皇帝的烦恼](https://www.luogu.com.cn/problem/P4409)
   - [冻结](https://www.luogu.com.cn/problem/P4822)
-  - [Xor-Paths](https://www.luogu.com.cn/problem/CF1006F)
   - [扫描线 & 矩形面积并](https://www.luogu.com.cn/problem/P5490)
   - [Center of the Earth](https://www.luogu.com.cn/problem/P5562)
-  - [Coloring Edges](https://www.luogu.com.cn/problem/CF1217D)
   - [Grouping](https://www.luogu.com.cn/problem/AT_dp_u)
   - [函数调用](https://www.luogu.com.cn/problem/P7077)
   - [假期计划](https://www.luogu.com.cn/problem/P8817)
