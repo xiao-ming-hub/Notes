@@ -2,10 +2,12 @@
 很多题会综合运用几种算法，我把它归到思维难度（对于这道题，而不是知识点本身）最大的那一类里。
 
 - 图
-  - 最短路
+  - 最短路 [单源最短路径（弱化版）](https://www.luogu.com.cn/problem/P3371)
     - [棋盘](luogu.p3956/doc.md) 实现细节
-  - LCA
+  - [LCA](https://www.luogu.com.cn/problem/P3379)
     - [货车运输](https://www.luogu.com.cn/problem/P1967) MST
+  - 连通性 [SCC](https://www.luogu.com.cn/problem/P3387) [割点](https://www.luogu.com.cn/problem/P3388)
+  - [车站分级](https://www.luogu.com.cn/problem/P1983) 如果 $n$ 和 $m$ 个点要两两连边，可以转化成 $n$ 个点到 $u$，$u$ 到 $m$ 个点，大幅减少边的数量。
 - 贪心
   - [模拟工厂](https://www.luogu.com.cn/problem/P3161) 枚举
   - [Strange Train Game](https://www.luogu.com.cn/problem/P11146) 反悔贪心 还有一些区间到图的转换思想
@@ -14,34 +16,43 @@
   - [星战](https://www.luogu.com.cn/problem/P8819)
 - dp
   - 初步
-    - 背包/01
+    - 背包
       - [采药](https://www.luogu.com.cn/problem/P1048)
+      - [选课](https://www.luogu.com.cn/problem/P2014) DAG
     - [过河卒](https://www.luogu.com.cn/problem/P1002)
     - [染色](https://www.luogu.com.cn/problem/P11233)
     - [装箱问题](https://www.luogu.com.cn/problem/P1049)
   - 状态压缩
     - [互不侵犯](https://www.luogu.com.cn/problem/P1896) 轮廓线
   - 子序列
-    - [抉择](poj.21792.md)
     - [最长上升子序列 LIS](lis-print.md)
-  - 树
-    - [dp/树形](dp-tree.md)
+    - [最长公共子序列 LCS](https://atcoder.jp/contests/dp/tasks/dp_f)
+    - [抉择](poj.21792.md)
+    - [消消乐](https://www.luogu.com.cn/problem/P9753) 记录 $g_i$ 为让 $[j,i]$ 可消的最大 $j$。
+    - [上升点列](https://www.luogu.com.cn/problem/P8816)
+  - [dp/树形](dp-tree.md)
   - 优化
-    - [单调队列](https://www.luogu.com.cn/problem/P1886)
+    - 单调队列
       - [股票交易](https://www.luogu.com.cn/problem/P3161)
     - 线段树
       - [杂赛选比](https://www.luogu.com.cn/problem/P10381) 只是用来优化最值
 - 数据结构
   - 链表
-    - [Two Teams](http://codeforces.com/problemset/problem/1154/E)3
-  - 单调队列
+    - [Two Teams](http://codeforces.com/problemset/problem/1154/E)
+  - [单调队列](https://www.luogu.com.cn/problem/P1886)
     - [NOIP 2018 J1 T23](noip2018j1t23.md) 双向链表也可以做，但这个做法更通用
     - [Patrik 音乐会的等待](https://www.luogu.com.cn/problem/P1823)
-  - 树状数组
+  - [单调栈](https://www.luogu.com.cn/problem/P5788)
+  - 并查集
+    - [程序自动分析](https://loj.ac/p/2129)
+    - [星球大战](https://www.luogu.com.cn/problem/P1197)
+    - [食物链](https://www.luogu.com.cn/problem/P2024)
+  - [ST 表](https://www.luogu.com.cn/problem/P3865)
+  - 树状数组 [1](https://www.luogu.com.cn/problem/P3374) [2](https://www.luogu.com.cn/problem/P3368)
     - 二阶前缀和
       - [无聊的数列](luogu.p1438.md)
   - [线段树](segment-tree.md)
-    - [Sasha and Array](https://codeforces.com/problemset/problem/718/C)
+    - [Sasha and Array](https://codeforces.com/problemset/problem/718/C) 还有数列递推转化成矩阵乘法
   - 扫描线
     - [矩形周长](https://www.luogu.com.cn/problem/P1856)
   - `std::set` / 平衡树
@@ -55,6 +66,7 @@
   - [降雨量](luogu.p2471.md) 分类讨论
   - [逻辑表达式](luogu.p8815.md) 表达式解析
   - [多项式输出](https://www.luogu.com.cn/problem/P1067)
+  - [阅览室](https://www.luogu.com.cn/problem/P1844)
 - 构造
   - 周期相关
     - [Vika and Price Tags](https://codeforces.com/problemset/problem/1848/C)
@@ -71,6 +83,7 @@
     > 每一个环上一定含有在与不在 DAG 上的两种边。DAG 一种颜色，其它边另一种颜色即可。没有环的话直接全部同色，有环时拓扑序可以任意规定。
     >
     > 无重边的无向图里 DAG 对应生成树，每一个环一定经过树边和非树边。有重边情况就多了。
+  - [Strange Madoka Game](https://www.luogu.com.cn/problem/P11144)
 - 搜索
   - [靶形数独](https://www.luogu.com.cn/problem/P1074)
   - [小木棍](https://www.luogu.com.cn/problem/P1120)
@@ -82,12 +95,16 @@
       - [最大公约数和最小公倍数问题](https://www.luogu.com.cn/problem/P1029)
         > $xy=pq$，在 $pq$ 的因子里枚举。
       - [Row GCD](https://codeforces.com/problemset/problem/1458/A)
+      - [二元一次不定方程 (exgcd)](https://www.luogu.com.cn/problem/P5656)
     - [CRT](https://www.luogu.com.cn/problem/P1495)
       - [Strange Madoka Game](luogu.p11144.md) 伪高精度
     - 勾股数
       - [Triangle](https://codeforces.com/problemset/problem/407/A)
-  - 线性方程组
-    - [文明](bzoj.2854.md) CRT
+    - [模意义下的乘法逆元](https://www.luogu.com.cn/problem/P3811)
+  - 线性代数 [矩阵快速幂](https://www.luogu.com.cn/problem/P3390)
+    - 线性方程组
+      - [文明](bzoj.2854.md) CRT
+  - [矩阵加速（数列）](https://www.luogu.com.cn/problem/P1939)
   - 容斥原理
     - [皇帝的烦恼](luogu.p4409.md) dp 二分
   - 整式
@@ -240,20 +257,13 @@
   - [奶酪](https://www.luogu.com.cn/problem/P3958)
   - [最小生成树](https://www.luogu.com.cn/problem/P3366)
   - [并查集](https://www.luogu.com.cn/problem/P3367)
-  - [单源最短路径（弱化版）](https://www.luogu.com.cn/problem/P3371)
-  - [树状数组 1](https://www.luogu.com.cn/problem/P3374)
-  - [树状数组 2](https://www.luogu.com.cn/problem/P3368)
-  - [最近公共祖先（LCA）](https://www.luogu.com.cn/problem/P3379)
   - [Cow Hurdles S](https://www.luogu.com.cn/problem/P2888)
   - [Meteor Shower S](https://www.luogu.com.cn/problem/P2895)
   - [Patting Heads S](https://www.luogu.com.cn/problem/P2926)
   - [Diamond Collector S](https://www.luogu.com.cn/problem/P3143)
   - [路障](https://www.luogu.com.cn/problem/P3395)
-  - [于是他错误的点名开始了](https://www.luogu.com.cn/problem/P2580)
   - [会议座位](https://www.luogu.com.cn/problem/P5149)
-  - [模意义下的乘法逆元](https://www.luogu.com.cn/problem/P3811)
   - [线段](https://www.luogu.com.cn/problem/P3842)
-  - [ST 表 && RMQ 问题](https://www.luogu.com.cn/problem/P3865)
   - [道路重建](https://www.luogu.com.cn/problem/P3905)
   - [图的遍历](https://www.luogu.com.cn/problem/P3916)
   - [最大食物链计数](https://www.luogu.com.cn/problem/P4017)
@@ -261,11 +271,9 @@
   - [单源最短路径（标准版）](https://www.luogu.com.cn/problem/P4779)
   - [铺设道路](https://www.luogu.com.cn/problem/P5019)
   - [简单题](https://www.luogu.com.cn/problem/P5057)
-  - [单调栈](https://www.luogu.com.cn/problem/P5788)
   - [Xor Sum 4](https://www.luogu.com.cn/problem/AT_abc147_d)
   - [Vacation](https://www.luogu.com.cn/problem/AT_dp_c)
   - [Knapsack 2](https://www.luogu.com.cn/problem/AT_dp_e)
-  - [LCS](https://www.luogu.com.cn/problem/AT_dp_f)
   - [Longest Path](https://www.luogu.com.cn/problem/AT_dp_g)
   - [Stones](https://www.luogu.com.cn/problem/AT_dp_k)
   - [Deque](https://www.luogu.com.cn/problem/AT_dp_l)
@@ -276,14 +284,12 @@
   - [网络连接](https://www.luogu.com.cn/problem/P7911)
   - [报数](https://www.luogu.com.cn/problem/P7960)
   - [集合运算 2](https://www.luogu.com.cn/problem/B3633)
-  - [上升点列](https://www.luogu.com.cn/problem/P8816)
   - [123](https://www.luogu.com.cn/problem/P8762)
   - [Sequence Query](https://www.luogu.com.cn/problem/AT_abc241_d)
   - [Shapes](https://www.luogu.com.cn/problem/AT_abc218_c)
   - [E-梅莉的市场经济学](https://www.luogu.com.cn/problem/P8873)
   - [原神](https://www.luogu.com.cn/problem/P9228)
   - [Shift vs. CapsLock](https://www.luogu.com.cn/problem/AT_abc303_d)
-  - [Strange Madoka Game](https://www.luogu.com.cn/problem/P11144)
   - [方格取数](https://www.luogu.com.cn/problem/P1004)
   - [传纸条](https://www.luogu.com.cn/problem/P1006)
   - [加分二叉树](https://www.luogu.com.cn/problem/P1040)
@@ -295,7 +301,6 @@
   - [最短路计数](https://www.luogu.com.cn/problem/P1144)
   - [中位数](https://www.luogu.com.cn/problem/P1168)
   - [表达式的转换](https://www.luogu.com.cn/problem/P1175)
-  - [星球大战](https://www.luogu.com.cn/problem/P1197)
   - [最大数](https://www.luogu.com.cn/problem/P1198)
   - [排序](https://www.luogu.com.cn/problem/P1347)
   - [油滴扩展](https://www.luogu.com.cn/problem/P1378)
@@ -309,14 +314,9 @@
   - [序列合并](https://www.luogu.com.cn/problem/P1631)
   - [宝物筛选](https://www.luogu.com.cn/problem/P1776)
   - [黑匣子](https://www.luogu.com.cn/problem/P1801)
-  - [阅览室](https://www.luogu.com.cn/problem/P1844)
   - [石子合并](https://www.luogu.com.cn/problem/P1880)
   - [团伙](https://www.luogu.com.cn/problem/P1892)
   - [发射站](https://www.luogu.com.cn/problem/P1901)
-  - [矩阵加速（数列）](https://www.luogu.com.cn/problem/P1939)
-  - [车站分级](https://www.luogu.com.cn/problem/P1983)
-  - [选课](https://www.luogu.com.cn/problem/P2014)
-  - [食物链](https://www.luogu.com.cn/problem/P2024)
   - [Nim 游戏](https://www.luogu.com.cn/problem/P2197)
   - [RoadBlock](https://w的ww.luogu.com.cn/problem/P2176)
   - [荷马史诗](https://www.luogu.com.cn/problem/P2168)
@@ -324,11 +324,6 @@
   - [Cow Contest S](https://www.luogu.com.cn/problem/P2419)
   - [着色方案](https://www.luogu.com.cn/problem/P2476)
   - [时间复杂度](https://www.luogu.com.cn/problem/P3952)
-  - [矩阵快速幂](https://www.luogu.com.cn/problem/P3390)
-  - [缩点](https://www.luogu.com.cn/problem/P3387)
-  - [割点（割顶）](https://www.luogu.com.cn/problem/P3388)
-  - [线段树 1](https://www.luogu.com.cn/problem/P3372)
-  - [线段树 2](https://www.luogu.com.cn/problem/P3373)
   - [KMP](https://www.luogu.com.cn/problem/P3375)
   - [异或序列](https://www.luogu.com.cn/problem/P3917)
   - [棋盘](https://www.luogu.com.cn/problem/P3956)
@@ -341,7 +336,6 @@
   - [密室](https://www.luogu.com.cn/problem/P4943)
   - [大师](https://www.luogu.com.cn/problem/P4933)
   - [货币系统](https://www.luogu.com.cn/problem/P5020)
-  - [二元一次不定方程 (exgcd)](https://www.luogu.com.cn/problem/P5656)
   - [纪念品](https://www.luogu.com.cn/problem/P5662)
   - [加工零件](https://www.luogu.com.cn/problem/P5663)
   - [网格图](https://www.luogu.com.cn/problem/P5687)
@@ -382,5 +376,3 @@
   - [函数调用](https://www.luogu.com.cn/problem/P7077)
   - [假期计划](https://www.luogu.com.cn/problem/P8817)
   - [圣诞树](https://www.luogu.com.cn/problem/P9119)
-  - [消消乐](https://www.luogu.com.cn/problem/P9753)
-  - [结构体](https://www.luogu.com.cn/problem/P9754)
