@@ -18,6 +18,7 @@ github: <https://github.com/xiao-ming-hub/Notes>
     - [结构体 | 模拟/代码规范](luogu.p9754.md)
     - [降雨量 | 模拟/分类讨论](luogu.p2471.md)
     - [逻辑表达式 | 模拟 表达式解析](luogu.p8815.md)
+    - [Cow Coupons G | 贪心/反悔](luogu.p3045.md)
   - 比赛总结
     - [CSP-S 2024 模拟 1](contest.x1.md)
     - [SCP 2024 S](contest.200849.md)
