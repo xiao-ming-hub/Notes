@@ -1,9 +1,9 @@
-# Notes - 存笔记的仓库（？）
-github: <https://github.com/xiao-ming-hub/Notes>
+# Notes - 存笔记的仓库
+- github: [xiao-ming-hub/Notes](https://github.com/xiao-ming-hub/Notes)
+- gitee: [a_Txy/Notes](https://gitee.com/a_Txy/Notes)
 
-数学公式问题挺大，但我不打算解决这个问题，也许可以看看隔壁 [gitee](https://gitee.com/a_Txy/Notes)？
-- OI
-  - [已 AC](exercises.md)
+数学公式可能有点问题，不过 vscode 里看没事。
+- OI  [已 AC](exercises.md)
   - 题解
     - [轮换式 | 数学/整式](luogu.p5084.md)
     - [反回文串 | 构造](luogu.p11190.md)
