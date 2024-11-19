@@ -174,6 +174,7 @@
   - [矩阵快速幂](https://www.luogu.com.cn/problem/P3390)
   - [矩阵加速（数列）](https://www.luogu.com.cn/problem/P1939)
   - [Xor-Paths](https://codeforces.com/problemset/problem/1006/F) 和算序列里和为定值的数对做法相同
+  - [线段树](luogu.p6025.md) 不是数据结构 类似数论分块
 - 枚举
   - [回文质数 Prime Palindromes](https://www.luogu.com.cn/problem/P1217) 一些奇怪优化，比如排除偶数位数
   - [Binary search](https://www.luogu.com.cn/problem/P8481)
