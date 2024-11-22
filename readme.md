@@ -25,6 +25,7 @@
     - [SCP 2024 S](contest.200849.md)
     - [春季测试 2023 (VC)](contest.102679.md)
   - 算法、模板
+    - [图论/连通性](connectivity/doc.md)
     - [dp/树形](dp-tree.md)
     - [dp/最长上升子序列](lis-print.md)
     - [数据结构/线段树](segment-tree.md)
