@@ -2,15 +2,17 @@
 很多题会综合运用几种算法，我把它归到思维难度（对于这道题，而不是知识点本身）最大的那一类里。当然要是你点开一道题发现它是黄的或者绿的，那大概要么是这道题很典看标题就想起来了，要么就是有一些思想在里面。
 
 ## 图
-- 最短路 [单源最短路径（弱化版）](https://www.luogu.com.cn/problem/P3371)
+- 最短路
+  - [单源最短路径（弱化版）](https://www.luogu.com.cn/problem/P3371)
+  - [全源最短路（Johnson）](https://www.luogu.com.cn/problem/P5905)
   - [棋盘](luogu.p3956/doc.md) 实现细节
 - [LCA](https://www.luogu.com.cn/problem/P3379)
   - [货车运输](https://www.luogu.com.cn/problem/P1967) MST
-- 连通性
+- [连通性](connectivity/doc.md)
   - [SCC](https://www.luogu.com.cn/problem/P3387)
   - [割点](https://www.luogu.com.cn/problem/P3388)
-  - [点双连通分量](https://www.luogu.com.cn/problem/P8435)
-  - [边双连通分量](https://www.luogu.com.cn/problem/P8436)
+  - [E-DCC](https://www.luogu.com.cn/problem/P8436)
+  - [V-DCC](https://www.luogu.com.cn/problem/P8435)
 - [Flip Digits 2](https://atcoder.jp/contests/typical90/tasks/typical90_aw) 也是区间转换成图
 - [冻结](https://www.luogu.com.cn/problem/P4822) 经典分层图
 
@@ -20,6 +22,9 @@
   - [超速检测](https://www.luogu.com.cn/problem/P11232)
 - 反悔
   - [Cow Coupons G](luogu.p3045.md) 上一次见还是 dinic
+- 邻项交换排序 [ouuan: 应用及注意事项](https://ouuan.github.io/post/浅谈邻项交换排序的应用以及需要注意的问题)
+  - [国王游戏](https://www.luogu.com.cn/problem/P1080) 高精度毒瘤 根据 $a_ib_i$ 排序
+  - [加工生产调度](https://www.luogu.com.cn/problem/P1248) cmp 要满足严格弱序
 - [模拟工厂](https://www.luogu.com.cn/problem/P3161) 枚举
 - [Strange Train Game](https://www.luogu.com.cn/problem/P11146) 反悔贪心 还有一些区间到图的转换思想
 - [The Enchanted Forest](https://codeforces.com/problemset/problem/1687/A)
@@ -63,6 +68,8 @@
     - [杂赛选比](https://www.luogu.com.cn/problem/P10381) 只是用来优化最值
 
 ## 数据结构
+数据结构不是看完题想用什么实现合适，而是先想清楚要维护什么，再选择对应的数据结构。
+
 - 链表
   - [Two Teams](http://codeforces.com/problemset/problem/1154/E)
 - [单调队列](https://www.luogu.com.cn/problem/P1886)
@@ -78,6 +85,7 @@
   - [Campus](https://codeforces.com/problemset/problem/571/D) 非常好的不能用路径压缩的例子。难点是协调合并时间和修改时间。
   - [三值逻辑](https://www.luogu.com.cn/problem/P9869)
 - [ST 表](https://www.luogu.com.cn/problem/P3865)
+  - [策略游戏](https://www.luogu.com.cn/problem/P8818)
 - 树状数组 [1](https://www.luogu.com.cn/problem/P3374) [2](https://www.luogu.com.cn/problem/P3368)
   - 二阶前缀和
     - [无聊的数列](luogu.p1438.md)
@@ -86,6 +94,9 @@
 - 扫描线
   - [矩形面积并](https://www.luogu.com.cn/problem/P5490)
   - [矩形周长](https://www.luogu.com.cn/problem/P1856)
+  - [HH 的项链](https://www.luogu.com.cn/problem/P1972)
+  - [园丁的烦恼](https://www.luogu.com.cn/problem/P2163)
+  - [Maximum Waterfall](https://codeforces.com/contest/269/problem/D) 用 `set` 迭代器时记得考虑
 - `std::set` / 平衡树
   - [报表统计](https://www.luogu.com.cn/problem/P1110) 代码细节想了很久
 - `std::priorirty_queue` / 堆
@@ -125,6 +136,7 @@
   > 无重边的无向图里 DAG 对应生成树，每一个环一定经过树边和非树边。有重边情况就多了。
 - [Strange Madoka Game](https://www.luogu.com.cn/problem/P11144)
 - [神奇的幻方](https://www.luogu.com.cn/problem/P2615) 就题意而言其实是模拟，但这也给出了一种构造幻方的方法。
+- [格雷码](https://www.luogu.com.cn/problem/P5657)
 
 ## 搜索
 - [靶形数独](https://www.luogu.com.cn/problem/P1074)
@@ -336,7 +348,6 @@
 - [棋盘](https://www.luogu.com.cn/problem/P3956)
 - [不开心的金明](https://www.luogu.com.cn/problem/P3985)
 - [种花](https://www.luogu.com.cn/problem/P8865)
-- [策略游戏](https://www.luogu.com.cn/problem/P8818)
 - [绿豆蛙的归宿](https://www.luogu.com.cn/problem/P4316)
 - [分组](https://www.luogu.com.cn/problem/P4447)
 - [最长异或路径](https://www.luogu.com.cn/problem/P4551)
@@ -347,7 +358,6 @@
 - [加工零件](https://www.luogu.com.cn/problem/P5663)
 - [网格图](https://www.luogu.com.cn/problem/P5687)
 - [Milk Visits S](https://www.luogu.com.cn/problem/P5836)
-- [全源最短路（Johnson）](https://www.luogu.com.cn/problem/P5905)
 - [Coins](https://www.luogu.com.cn/problem/AT_dp_i)
 - [Candies](https://www.luogu.com.cn/problem/AT_dp_m)
 - [表达式](https://www.luogu.com.cn/problem/P7073)
