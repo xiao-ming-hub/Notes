@@ -6,9 +6,12 @@
   - [单源最短路径（弱化版）](https://www.luogu.com.cn/problem/P3371)
   - [全源最短路（Johnson）](https://www.luogu.com.cn/problem/P5905)
   - [棋盘](luogu.p3956/doc.md) 实现细节
+  - [假期计划](https://www.luogu.com.cn/problem/P8817)
 - [LCA](https://www.luogu.com.cn/problem/P3379)
   - [货车运输](https://www.luogu.com.cn/problem/P1967) MST
 - [连通性](connectivity/doc.md)
+  - 差分约束
+    - [糖果](https://www.luogu.com.cn/problem/P3275)
   - [SCC](https://www.luogu.com.cn/problem/P3387)
   - [割点](https://www.luogu.com.cn/problem/P3388)
   - [E-DCC](https://www.luogu.com.cn/problem/P8436)
@@ -24,11 +27,14 @@
   - [Cow Coupons G](luogu.p3045.md) 上一次见还是 dinic
 - 邻项交换排序 [ouuan: 应用及注意事项](https://ouuan.github.io/post/浅谈邻项交换排序的应用以及需要注意的问题)
   - [国王游戏](https://www.luogu.com.cn/problem/P1080) 高精度毒瘤 根据 $a_ib_i$ 排序
+  - [皇后游戏](https://www.luogu.com.cn/problem/P2123) 上面注意事项的第二道例题
   - [加工生产调度](https://www.luogu.com.cn/problem/P1248) cmp 要满足严格弱序
+  - [Mountain Climbing S](https://www.luogu.com.cn/problem/P1561) 虽然比上面的限制放松了，可是不影响最优方案
 - [模拟工厂](https://www.luogu.com.cn/problem/P3161) 枚举
 - [Strange Train Game](https://www.luogu.com.cn/problem/P11146) 反悔贪心 还有一些区间到图的转换思想
 - [The Enchanted Forest](https://codeforces.com/problemset/problem/1687/A)
 - [排队接水](https://www.luogu.com.cn/problem/P1223) 纯粹的排序不等式
+- [猫耳小](https://www.luogu.com.cn/problem/P9202) 当时想复杂了。遍历，删除使 mex 为 $k$ 的数即可
 
 ## hash
   - [星战](https://www.luogu.com.cn/problem/P8819)
@@ -48,6 +54,7 @@
   - [最大正方形](https://www.luogu.com.cn/problem/P1387)
 - 状态压缩
   - [互不侵犯](https://www.luogu.com.cn/problem/P1896) 轮廓线
+  - [Grouping](https://atcoder.jp/contests/dp/tasks/dp_u)
 - 子序列
   - [最长上升子序列 LIS](lis-print.md)
   - [最长公共子序列 LCS](https://atcoder.jp/contests/dp/tasks/dp_f)
@@ -59,6 +66,7 @@
   - [树上染色](https://www.luogu.com.cn/problem/P3177)
   - [函数调用](https://www.luogu.com.cn/problem/P7077)
   - [没有上司的舞会](https://www.luogu.com.cn/problem/P1352)
+  - [LUK-Triumphal arch](https://www.luogu.com.cn/problem/P3554)
 - DAG
   - [车站分级](https://www.luogu.com.cn/problem/P1983) 如果 $n$ 和 $m$ 个点要两两连边，可以转化成 $n$ 个点到 $u$，$u$ 到 $m$ 个点，大幅减少边的数量。
 - 优化
@@ -66,6 +74,7 @@
     - [股票交易](https://www.luogu.com.cn/problem/P3161)
   - 线段树
     - [杂赛选比](https://www.luogu.com.cn/problem/P10381) 只是用来优化最值
+- [圣诞树](https://www.luogu.com.cn/problem/P9119)
 
 ## 数据结构
 数据结构不是看完题想用什么实现合适，而是先想清楚要维护什么，再选择对应的数据结构。
@@ -137,8 +146,16 @@
 - [Strange Madoka Game](https://www.luogu.com.cn/problem/P11144)
 - [神奇的幻方](https://www.luogu.com.cn/problem/P2615) 就题意而言其实是模拟，但这也给出了一种构造幻方的方法。
 - [格雷码](https://www.luogu.com.cn/problem/P5657)
+- [Center of the Earth](https://www.luogu.com.cn/problem/P5562)
 
 ## 搜索
+- 分治
+  - 点 [点分治 1](https://www.luogu.com.cn/problem/P3806)
+    - [Tree](https://www.luogu.com.cn/problem/P4178)
+  - 分块
+    - [线段树](luogu.p6025.md) 不是数据结构 类似数论分块
+    - [余数求和](https://www.luogu.com.cn/problem/P2261)
+    - [RMQ 的分块做法](https://www.luogu.com.cn/record/186252766)
 - [靶形数独](https://www.luogu.com.cn/problem/P1074)
 - [小木棍](https://www.luogu.com.cn/problem/P1120)
 - [最大公约数](https://www.luogu.com.cn/problem/P7243) 纯粹的 BFS
@@ -156,8 +173,6 @@
     - [Strange Madoka Game](luogu.p11144.md) 伪高精度
   - 勾股数
     - [Triangle](https://codeforces.com/problemset/problem/407/A)
-  - 分块
-    - [余数求和](https://www.luogu.com.cn/problem/P2261)
   - [卢卡斯定理/Lucas 定理](https://www.luogu.com.cn/problem/P3807)
   - [模意义下的乘法逆元](https://www.luogu.com.cn/problem/P3811)
 - [线性方程组](https://www.luogu.com.cn/problem/P2455)
@@ -186,13 +201,14 @@
   - [矩阵快速幂](https://www.luogu.com.cn/problem/P3390)
   - [矩阵加速（数列）](https://www.luogu.com.cn/problem/P1939)
   - [Xor-Paths](https://codeforces.com/problemset/problem/1006/F) 和算序列里和为定值的数对做法相同
-  - [线段树](luogu.p6025.md) 不是数据结构 类似数论分块
 - 枚举
   - [回文质数 Prime Palindromes](https://www.luogu.com.cn/problem/P1217) 一些奇怪优化，比如排除偶数位数
   - [Binary search](https://www.luogu.com.cn/problem/P8481)
+  - [麻将](https://www.luogu.com.cn/problem/P4050)
 - 前缀和
   - [让我们异或吧](https://www.luogu.com.cn/problem/P2420)
 - [快速读入](https://www.luogu.com.cn/problem/P10815)
+- [矩阵取数游戏](luogu.p1005.md) 有区间 dp，但重点是 `int128` 使用方法。
 
 ## todo
 - [骑士的工作](https://www.luogu.com.cn/problem/P2695)
@@ -369,10 +385,3 @@
 - [商店砍价](https://www.luogu.com.cn/problem/P11188)
 - [瑰丽华尔兹](https://www.luogu.com.cn/problem/P2254)
 - [蚯蚓](https://www.luogu.com.cn/problem/P2827)
-- [糖果](https://www.luogu.com.cn/problem/P3275)
-- [OKR-Periods of Words](https://www.luogu.com.cn/problem/P3435)
-- [麻将](https://www.luogu.com.cn/problem/P4050)
-- [Center of the Earth](https://www.luogu.com.cn/problem/P5562)
-- [Grouping](https://www.luogu.com.cn/problem/AT_dp_u)
-- [假期计划](https://www.luogu.com.cn/problem/P8817)
-- [圣诞树](https://www.luogu.com.cn/problem/P9119)
