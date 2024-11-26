@@ -20,6 +20,7 @@
     - [逻辑表达式 | 模拟 表达式解析](luogu.p8815.md)
     - [Cow Coupons G | 贪心/反悔](luogu.p3045.md)
     - [线段树 | 数论分块](luogu.p6025.md)
+    - [矩阵取数游戏 | int128](luogu.p1005.md)
   - 比赛总结
     - [CSP-S 2024 模拟 1](contest.x1.md)
     - [SCP 2024 S](contest.200849.md)
