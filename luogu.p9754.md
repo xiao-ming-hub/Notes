@@ -137,7 +137,6 @@ int main() {
 using ll=long long;
 using String=std::string;
 using IMap=std::map<String, int>;
-const int N=105;
 
 struct Member {
   int type;

@@ -41,11 +41,11 @@ $(u,v)$ 是桥，仅当 $(u,v)\in E$ 且 $r(u)<s(v)$. 这时有 $r(v)=s(v)$，$v
 void tar(int u, int q) {
   static int tm = 0;
   ti[u] = lo[u] = ++tm;
-  it[u] = true, st[top++] = u;
+  st[top++] = u;
 
   for (int p=hd[u], v; ~p; p=nx[p])
     if (!ti[v = to[p]]) {
-      g(v, p), din(lo[u], lo[v]);
+      tar(v, p), din(lo[u], lo[v]);
       if (ti[u] < lo[v]); // (u, v) 是桥
     } else if (p ^ q ^ 1)
       din(lo[u], ti[v]);
@@ -83,7 +83,7 @@ void tar(int u, int q) {
 
 ![exp](exp.png)
 
-非根节点是割点，仅当 $\exist v\in c(u),\ r(v)\le s(u)$. 这意味着，删去 $u$ 后 $v$ 会从图中独立出来。
+非根节点 $u$ 是割点，仅当 $\exist v\in c(u),\ r(v)\le s(u)$. 这意味着，删去 $u$ 后 $v$ 会从图中独立出来。
 
 根节点是割点，仅当 $|c(u)|\ge2$.
 ```cpp
@@ -134,7 +134,7 @@ void tar(int u) {
     if (!ti[v=to[p]]) {
       tar(v);
       din(lo[u], lo[v]);
-    } else if (it[v])
+    } else if (it[v]) // 确保 p 不是横向边
       din(lo[u], ti[v]);
   }
   if (ti[u]==lo[u]) while (true) {
