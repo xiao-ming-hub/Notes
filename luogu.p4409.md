@@ -1,4 +1,4 @@
-# 皇帝的烦恼 | dp/容斥原理 - SatJul20 2024
+# 皇帝的烦恼 | 计数/容斥原理 - SatJul20 2024
 > [Luogu P4409](https://www.luogu.com.cn/problem/P4409)：给出 n 个环形互斥集合 $A_i$ 的大小 $|A_i|=a_i$, 求 $\min|\bigcup Ai|$.<br/>
 > 环形互斥: $A_1\cap A_2=A_2\cap A_3=...=A_{n-1}\cap A_n=A_n\cap A_1=\emptyset$. <br/>
 > 1 ≤ n ≤ 2e4, $a_i$ ≤ 1e5.
