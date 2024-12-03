@@ -34,6 +34,7 @@
     - [数据结构/线段树](segment-tree.md)
 - [命令行简介](commandline.md)
 - [在命令提示符里显示分支名](git-ps1.md)
+- [ncurses 简要手册](ncurses_template.md)
 - 数学/物理
   - [排列组合 球盒问题 把 $n$ 个球放进 $m$ 个盒子的方案数]()
   - [凸透镜成像规律](tu-tou-jing-cheng-xiang/note.md)
