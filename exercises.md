@@ -9,6 +9,7 @@
   - [假期计划](https://www.luogu.com.cn/problem/P8817)
 - [LCA](https://www.luogu.com.cn/problem/P3379)
   - [货车运输](https://www.luogu.com.cn/problem/P1967) MST
+  - [Speaker](https://www.luogu.com.cn/problem/P11324) 观察到 (x,y)+(y,z) 可以转化成 (x,t)+2(t,y)+(t,z). 对于每个 t，预处理 (t,y) 最大的利润，用 LCA 求路径和+点权最大值即可（点权指的是预处理后的，不是输入的 c）。
 - [连通性](connectivity/doc.md)
   - 差分约束
     - [糖果](https://www.luogu.com.cn/problem/P3275)
@@ -21,7 +22,7 @@
 
 ## 贪心
 - 区间覆盖
-  - [凌乱的yyy / 线段覆盖](https://www.luogu.com.cn/problem/P1803)
+  - [凌乱的 yyy](https://www.luogu.com.cn/problem/P1803)
   - [超速检测](https://www.luogu.com.cn/problem/P11232)
 - 反悔
   - [Cow Coupons G](luogu.p3045.md) 上一次见还是 dinic
@@ -35,38 +36,49 @@
 - [The Enchanted Forest](https://codeforces.com/problemset/problem/1687/A)
 - [排队接水](https://www.luogu.com.cn/problem/P1223) 纯粹的排序不等式
 - [猫耳小](https://www.luogu.com.cn/problem/P9202) 当时想复杂了。遍历，删除使 mex 为 $k$ 的数即可
+- [骑士的工作](https://www.luogu.com.cn/problem/P2695) 尽可能让 zi 小的人砍尽可能小的头。
+- [小A的糖果](https://www.luogu.com.cn/problem/P3817) 从 2 个和 3 个盒子开始递推，每遇到多的就把它吃掉
+- [跳跳！](https://www.luogu.com.cn/problem/P4995)
+> 只需要证明第一步跳到了 $H=\max h$. 假设存在更优解，第一步是 $h_0(h_0\ne H)$.
+> - 若 $H$ 是终点，把顺序全部反过来，总贡献增大 $H^2-h^2$.
+> - 若 $H$ 不是终点，设第 $k$ 步跳到了 $H$，第 $(k+1)$ 步跳到了 $h'$. 把第 $1\sim k$ 步反转，总贡献增大
+> $$H^2-h_0^2+(h_0-h')^2-(H-h')^2=2h'(H-h)>0.$$
+- [Strange Cake Game](https://www.luogu.com.cn/problem/P11143) 2 人决策，先考虑后手，分析先手的策略。
 
 ## hash
   - [星战](https://www.luogu.com.cn/problem/P8819)
 
 ## dp
 - 初步
-  - 背包
-    - [采药](https://www.luogu.com.cn/problem/P1048)
-    - [选课](https://www.luogu.com.cn/problem/P2014) DAG
-    - [A+B Problem（再升级）](https://www.luogu.com.cn/problem/P1832)
-    - [最大约数和](https://www.luogu.com.cn/problem/P1734)
-    - [kkksc03考前临时抱佛脚](https://www.luogu.com.cn/problem/P2392)
   - [过河卒](https://www.luogu.com.cn/problem/P1002)
   - [染色](https://www.luogu.com.cn/problem/P11233)
   - [装箱问题](https://www.luogu.com.cn/problem/P1049)
   - [数字三角形 Number Triangles](https://www.luogu.com.cn/problem/P1216)
   - [最大正方形](https://www.luogu.com.cn/problem/P1387)
+- 背包
+  - [采药](https://www.luogu.com.cn/problem/P1048)
+  - [选课](https://www.luogu.com.cn/problem/P2014) DAG
+  - [A+B Problem（再升级）](https://www.luogu.com.cn/problem/P1832)
+  - [最大约数和](https://www.luogu.com.cn/problem/P1734)
+  - [kkksc03考前临时抱佛脚](https://www.luogu.com.cn/problem/P2392)
+  - [数列](luogu.p7961.md)
 - 状态压缩
   - [互不侵犯](https://www.luogu.com.cn/problem/P1896) 轮廓线
   - [Grouping](https://atcoder.jp/contests/dp/tasks/dp_u)
 - 子序列
   - [最长上升子序列 LIS](lis-print.md)
   - [最长公共子序列 LCS](https://atcoder.jp/contests/dp/tasks/dp_f)
-  - [抉择](poj.21792.md)
+  - [抉择](pjudge.1792.md)
   - [消消乐](https://www.luogu.com.cn/problem/P9753) 记录 $g_i$ 为让 $[j,i]$ 可消的最大 $j$。
   - [上升点列](https://www.luogu.com.cn/problem/P8816)
+  - [书本整理](https://www.luogu.com.cn/problem/P1103)
 - [树形](dp-tree.md)
   - [Rebuilding Roads](http://poj.org/problem?id=1947) 代码见上面的题解
   - [树上染色](https://www.luogu.com.cn/problem/P3177)
   - [函数调用](https://www.luogu.com.cn/problem/P7077)
   - [没有上司的舞会](https://www.luogu.com.cn/problem/P1352)
   - [LUK-Triumphal arch](https://www.luogu.com.cn/problem/P3554)
+  - [Mag](https://www.luogu.com.cn/problem/P6287) 要观察最优路径的特点
 - DAG
   - [车站分级](https://www.luogu.com.cn/problem/P1983) 如果 $n$ 和 $m$ 个点要两两连边，可以转化成 $n$ 个点到 $u$，$u$ 到 $m$ 个点，大幅减少边的数量。
 - 优化
@@ -147,6 +159,7 @@
 - [神奇的幻方](https://www.luogu.com.cn/problem/P2615) 就题意而言其实是模拟，但这也给出了一种构造幻方的方法。
 - [格雷码](https://www.luogu.com.cn/problem/P5657)
 - [Center of the Earth](https://www.luogu.com.cn/problem/P5562)
+- [Happy Card](https://www.luogu.com.cn/problem/P11323) 观察到删 4 个和删 3+1 是同一类，然后只要处理重复 1 2 3 次的牌即可。
 
 ## 搜索
 - 分治
@@ -175,26 +188,30 @@
     - [Triangle](https://codeforces.com/problemset/problem/407/A)
   - [卢卡斯定理/Lucas 定理](https://www.luogu.com.cn/problem/P3807)
   - [模意义下的乘法逆元](https://www.luogu.com.cn/problem/P3811)
+  - [线性筛素数](https://www.luogu.com.cn/problem/P3383)
 - [线性方程组](https://www.luogu.com.cn/problem/P2455)
   - [高斯消元法](https://www.luogu.com.cn/problem/P3389)
   - [文明](bzoj.2854.md) CRT
   - [球形空间产生器](https://www.luogu.com.cn/problem/P4035)
-- 容斥原理
-  - [皇帝的烦恼](luogu.p4409.md) dp 二分
 - 整式
   - [轮换式](luogu.p5084.md)
-- 组合计数
+- 计数
   - Catalan 数
     - [栈](https://www.luogu.com.cn/problem/P1044)
-  - 加法/乘法原理
+  - 加乘法原理
     - [A-B 数对](https://www.luogu.com.cn/problem/P1102)
+    - [建造军营](luogu.p8867.md) dp 树形
+  - 容斥原理
+    - [皇帝的烦恼](luogu.p4409.md) dp 二分
 
 ## 基础算法
 - 二分
   - [水杯降温](luogu.p11189.md) 不等式 差分
   - [种树](https://www.luogu.com.cn/problem/P9755)
   - [Widespread](https://atcoder.jp/contests/abc063/tasks/arc075_b)
-  - [逛画展](https://www.luogu.com.cn/problem/P1638) 二分 滑动窗口 维护不同数字个数
+  - [逛画展](https://www.luogu.com.cn/problem/P1638) 滑动窗口 维护不同数字个数
+  - [重生](https://pjudge.ac/contest/1390/problem/21793) 一轮选择深度思考次数有 $c$ 的限制，这时只需要从整体考虑即可。
+  - [数列分段 Section II](https://www.luogu.com.cn/problem/P1182) 最小化最大值，二分最大值
 - 倍增
   - [64 位整数乘法](https://www.luogu.com.cn/problem/P10446)
   - [快速幂](https://www.luogu.com.cn/problem/P1226)
@@ -209,49 +226,9 @@
   - [让我们异或吧](https://www.luogu.com.cn/problem/P2420)
 - [快速读入](https://www.luogu.com.cn/problem/P10815)
 - [矩阵取数游戏](luogu.p1005.md) 有区间 dp，但重点是 `int128` 使用方法。
+- [PASTE](https://www.luogu.com.cn/problem/P1188) O(nk) = 1e8 可以直接做
 
 ## todo
-- [骑士的工作](https://www.luogu.com.cn/problem/P2695)
-- [线性筛素数](https://www.luogu.com.cn/problem/P3383)
-- [Charm Bracelet S](https://www.luogu.com.cn/problem/P2871)
-- [地毯](https://www.luogu.com.cn/problem/P3397)
-- [攀爬者](https://www.luogu.com.cn/problem/P5143)
-- [小A的糖果](https://www.luogu.com.cn/problem/P3817)
-- [不重复数字](https://www.luogu.com.cn/problem/P4305)
-- [小凯的数字](https://www.luogu.com.cn/problem/P4942)
-- [跳跳！](https://www.luogu.com.cn/problem/P4995)
-- [三角形分类](https://www.luogu.com.cn/problem/P5717)
-- [质数口袋](https://www.luogu.com.cn/problem/P5723)
-- [质数筛](https://www.luogu.com.cn/problem/P5736)
-- [选举学生会](https://www.luogu.com.cn/problem/P1271)
-- [查找](https://www.luogu.com.cn/problem/P2249)
-- [查找文献](https://www.luogu.com.cn/problem/P5318)
-- [Frog 1](https://www.luogu.com.cn/problem/AT_dp_a)
-- [Frog 2](https://www.luogu.com.cn/problem/AT_dp_b)
-- [Knapsack 1](https://www.luogu.com.cn/problem/AT_dp_d)
-- [Grid 1](https://www.luogu.com.cn/problem/AT_dp_h)
-- [weight](https://www.luogu.com.cn/problem/P9497)
-- [涂色游戏](https://www.luogu.com.cn/problem/P9117)
-- [词典](https://www.luogu.com.cn/problem/P9868)
-- [密码锁](https://www.luogu.com.cn/problem/P9752)
-- [填幻方](https://www.luogu.com.cn/problem/B3940)
-- [Strange Cake Game](https://www.luogu.com.cn/problem/P11143)
-- [决斗](https://www.luogu.com.cn/problem/P11231)
-- [拼数](https://www.luogu.com.cn/problem/P1012)
-- [导弹拦截](https://www.luogu.com.cn/problem/P1020)
-- [数的划分](https://www.luogu.com.cn/problem/P1025)
-- [寻宝](https://www.luogu.com.cn/problem/P1076)
-- [Fence Repair G](https://www.luogu.com.cn/problem/P1090)
-- [合唱队形](https://www.luogu.com.cn/problem/P1091)
-- [书本整理](https://www.luogu.com.cn/problem/P1103)
-- [删数问题](https://www.luogu.com.cn/problem/P1106)
-- [修复公路](https://www.luogu.com.cn/problem/P1111)
-- [杂务](https://www.luogu.com.cn/problem/P1113)
-- [旅行计划](https://www.luogu.com.cn/problem/P1137)
-- [数列分段 Section II](https://www.luogu.com.cn/problem/P1182)
-- [PASTE](https://www.luogu.com.cn/problem/P1188)
-- [买礼物](https://www.luogu.com.cn/problem/P1194)
-- [口袋的天空](https://www.luogu.com.cn/problem/P1195)
 - [三国游戏](https://www.luogu.com.cn/problem/P1199)
 - [八皇后 Checker Challenge](https://www.luogu.com.cn/problem/P1219)
 - [地毯填补问题](https://www.luogu.com.cn/problem/P1228)
