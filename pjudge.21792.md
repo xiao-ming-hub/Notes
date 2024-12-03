@@ -1,7 +1,7 @@
 # 抉择 | dp/子序列 - TueOct22 2024
 好像是七、八月的模拟赛时做的，挖了个坑现在才来填。
 - [QOJ 1086 - Bank Security Unification](https://qoj.ac/problem/1086)
-- [POJ 21792 - 抉择](http://pjudge.ac/problem/21792)
+- [Public Judge 21792 - 抉择](http://pjudge.ac/problem/21792)
 
 给一个长度为 $n$ 的非负整数序列 $\{a\}$，求它所有子序列 $\{a_{i1},a_{i2},\cdots,a_{ik}\}\ (1\le i_1<i_2<\cdots<i_k\le n)$ 中相邻两位的按位与之和
 $$\sum^{k−1}_{j=1}a_{ij}\odot a_{i(j+1)}$$
