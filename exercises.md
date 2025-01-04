@@ -17,6 +17,9 @@
   - [割点](https://www.luogu.com.cn/problem/P3388)
   - [E-DCC](https://www.luogu.com.cn/problem/P8436)
   - [V-DCC](https://www.luogu.com.cn/problem/P8435)
+- 二分图
+  - [二分图最大匹配](https://www.luogu.com.cn/problem/P3386) 匈牙利算法板子
+  - [西湖有雅座](https://www.luogu.com.cn/problem/P11409) 给不能共存的零件连边，有解仅当构成二分图，给每个连通块计数即可。
 - [Flip Digits 2](https://atcoder.jp/contests/typical90/tasks/typical90_aw) 也是区间转换成图
 - [冻结](https://www.luogu.com.cn/problem/P4822) 经典分层图
 
@@ -39,11 +42,19 @@
 - [骑士的工作](https://www.luogu.com.cn/problem/P2695) 尽可能让 zi 小的人砍尽可能小的头。
 - [小A的糖果](https://www.luogu.com.cn/problem/P3817) 从 2 个和 3 个盒子开始递推，每遇到多的就把它吃掉
 - [跳跳！](https://www.luogu.com.cn/problem/P4995)
-> 只需要证明第一步跳到了 $H=\max h$. 假设存在更优解，第一步是 $h_0(h_0\ne H)$.
-> - 若 $H$ 是终点，把顺序全部反过来，总贡献增大 $H^2-h^2$.
-> - 若 $H$ 不是终点，设第 $k$ 步跳到了 $H$，第 $(k+1)$ 步跳到了 $h'$. 把第 $1\sim k$ 步反转，总贡献增大
-> $$H^2-h_0^2+(h_0-h')^2-(H-h')^2=2h'(H-h)>0.$$
+  > 只需要证明第一步跳到了 $H=\max h$. 假设存在更优解，第一步是 $h_0(h_0\ne H)$.
+  > - 若 $H$ 是终点，把顺序全部反过来，总贡献增大 $H^2-h^2$.
+  > - 若 $H$ 不是终点，设第 $k$ 步跳到了 $H$，第 $(k+1)$ 步跳到了 $h'$. 把第 $1\sim k$ 步反转，总贡献增大
+  > $$H^2-h_0^2+(h_0-h')^2-(H-h')^2=2h'(H-h)>0.$$
 - [Strange Cake Game](https://www.luogu.com.cn/problem/P11143) 2 人决策，先考虑后手，分析先手的策略。
+- [游戏预言](https://www.luogu.com.cn/problem/P2649)
+  > 假设 J 总是把牌从大到小出，其余所有的牌都拿在一个人 F 手里，每次出 $(m-1)$ 张。如果 F 有牌能赢得这轮，剩下要出的 $(m-2$ 张牌拿最小的占位即可。
+  > 
+  > 之后从大到小枚举每一张牌。对于 $i(1\le i\le mn)$ 号牌：
+  > - 它不是 J 的牌，把它标记为 F 的牌。
+  > - 它是 J 的牌。如果 F 的牌至少有 1 张能够压住 J，那么 F 总是应该选择压上。因为对于 F 的任意 2 张比 J 的这张大的牌，用哪张盖上 J 的这一张牌，另一张都可以在后续回合里继续创造胜利。
+  > 
+  > 用桶存下 J 的每一张牌，从 $mn$ 到 1 反向枚举，如果是 F 的牌则加入储备牌库（$c\gets c+1$）；是 J 的就看看牌库有没有牌，如果有 $c\gets c-1$，否则 $a\gets a+1$。
 
 ## hash
   - [星战](https://www.luogu.com.cn/problem/P8819)
@@ -56,6 +67,7 @@
   - [数字三角形 Number Triangles](https://www.luogu.com.cn/problem/P1216)
   - [最大正方形](https://www.luogu.com.cn/problem/P1387)
 - 背包
+  - [Cow Exhibition G](https://www.luogu.com.cn/problem/P2340) 设容量时要刚好等于
   - [采药](https://www.luogu.com.cn/problem/P1048)
   - [选课](https://www.luogu.com.cn/problem/P2014) DAG
   - [A+B Problem（再升级）](https://www.luogu.com.cn/problem/P1832)
@@ -79,7 +91,28 @@
   - [没有上司的舞会](https://www.luogu.com.cn/problem/P1352)
   - [LUK-Triumphal arch](https://www.luogu.com.cn/problem/P3554)
   - [Mag](https://www.luogu.com.cn/problem/P6287) 要观察最优路径的特点
+  - [贪吃的九头龙](https://www.luogu.com.cn/problem/P4362)
+    > 一棵树，把点分成 $m$ 组，每组不能空。包含节点 1 的那组恰好有 $k$ 个点。
+    > 分配方法的代价是一些边权和，这些边的端点属于同一组。最小化分配代价。
+    >
+    > $1\le k\le n\le 300; 2\le m\le n. 1\le u\le v\le n; 0\le w\le 1e5.$
+    >
+    > - $(u,i,j)$ 表示状态 $(u,i)$ 子树里，$j$ 个点在 1 组；
+    > - $f/g$ 表示 $u$ 在/不在 1 组时的最小代价。
+    > 
+    > 转移：设
+    > $$\begin{aligned}
+    > f' & = f(u,i+1,j) & g' & = g(u,i+1,j)\\
+    > f_u & = f(u,i,x) & g_u & = g(u,i,x)\\
+    > f_v & = f(v,|\operatorname{ch}v|,j-x) & g_v & = g(v,|\operatorname{ch}v|,j-x)\\
+    > \end{aligned}$$
+    > 那么（记得处理无解的状态）
+    > $$\begin{aligned}
+    > f' & \gets\min_{0\le x\le j}\{f_u+f_v+w, f_u+g_v\}\\
+    > g' & \gets\min_x\{g_u+f_v, g_u+g_v+[m=2]\times w\}
+    > \end{aligned}$$
 - DAG
+  - [尼克的任务](https://www.luogu.com.cn/problem/P1280) 如果 $i$ 完成后能直接做 $j$ 任务，就连 $i\rightarrow j$ 的边，权值是空闲时间。
   - [车站分级](https://www.luogu.com.cn/problem/P1983) 如果 $n$ 和 $m$ 个点要两两连边，可以转化成 $n$ 个点到 $u$，$u$ 到 $m$ 个点，大幅减少边的数量。
 - 优化
   - 单调队列
@@ -160,6 +193,8 @@
 - [格雷码](https://www.luogu.com.cn/problem/P5657)
 - [Center of the Earth](https://www.luogu.com.cn/problem/P5562)
 - [Happy Card](https://www.luogu.com.cn/problem/P11323) 观察到删 4 个和删 3+1 是同一类，然后只要处理重复 1 2 3 次的牌即可。
+- [三国游戏](https://www.luogu.com.cn/problem/P1199) 找每行次大值的最大。能更优的只能是某行最大值，这时它这一列一定有比它更大的，因为对称，这个数会在它这列标对应的行标以次大值出现。
+- [TABOVI](https://www.luogu.com.cn/problem/P6446) 差分，记得从整体上考虑。
 
 ## 搜索
 - 分治
@@ -188,7 +223,10 @@
     - [Triangle](https://codeforces.com/problemset/problem/407/A)
   - [卢卡斯定理/Lucas 定理](https://www.luogu.com.cn/problem/P3807)
   - [模意义下的乘法逆元](https://www.luogu.com.cn/problem/P3811)
-  - [线性筛素数](https://www.luogu.com.cn/problem/P3383)
+  - 筛法 [线性筛素数](https://www.luogu.com.cn/problem/P3383)
+    - 区间筛 [素数密度](https://www.luogu.com.cn/problem/P1835)
+      > 把 $[2,\sqrt R]$ 的素数找到，对每个素数给 $[L,R]$ 内的合数标记。时间 $O(\sqrt R + (R-L)\log \log R)$
+      - [A % B Problem](https://www.luogu.com.cn/problem/P1865)
 - [线性方程组](https://www.luogu.com.cn/problem/P2455)
   - [高斯消元法](https://www.luogu.com.cn/problem/P3389)
   - [文明](bzoj.2854.md) CRT
@@ -201,6 +239,7 @@
   - 加乘法原理
     - [A-B 数对](https://www.luogu.com.cn/problem/P1102)
     - [建造军营](luogu.p8867.md) dp 树形
+    - [对角线](https://www.luogu.com.cn/problem/P2181) 任选 4 个点互相连线，只能形成 1 个点（另外 2 个交于图形外），所以是 $\binom n4$
   - 容斥原理
     - [皇帝的烦恼](luogu.p4409.md) dp 二分
 
@@ -212,6 +251,7 @@
   - [逛画展](https://www.luogu.com.cn/problem/P1638) 滑动窗口 维护不同数字个数
   - [重生](https://pjudge.ac/contest/1390/problem/21793) 一轮选择深度思考次数有 $c$ 的限制，这时只需要从整体考虑即可。
   - [数列分段 Section II](https://www.luogu.com.cn/problem/P1182) 最小化最大值，二分最大值
+  - [排序](https://www.luogu.com.cn/problem/P2824) 很恶毒的线段树，如果下标 $[0,n)$ 注意特判 $[n,n)$ 的查询，不然会因为标记为 0 表示有标记而无限递归（如果用其它的代号也不见得会多好）。CCF 真题可以去 [LibreOJ](https://loj.ac) 下数据。
 - 倍增
   - [64 位整数乘法](https://www.luogu.com.cn/problem/P10446)
   - [快速幂](https://www.luogu.com.cn/problem/P1226)
@@ -229,42 +269,6 @@
 - [PASTE](https://www.luogu.com.cn/problem/P1188) O(nk) = 1e8 可以直接做
 
 ## todo
-- [三国游戏](https://www.luogu.com.cn/problem/P1199)
-- [八皇后 Checker Challenge](https://www.luogu.com.cn/problem/P1219)
-- [地毯填补问题](https://www.luogu.com.cn/problem/P1228)
-- [尼克的任务](https://www.luogu.com.cn/problem/P1280)
-- [积水面积](https://www.luogu.com.cn/problem/P1318)
-- [血色先锋队](https://www.luogu.com.cn/problem/P1332)
-- [Heat Wave G](https://www.luogu.com.cn/problem/P1339)
-- [电车](https://www.luogu.com.cn/problem/P1346)
-- [滑雪](https://www.luogu.com.cn/problem/P1434)
-- [马的遍历](https://www.luogu.com.cn/problem/P1443)
-- [虫洞 wormhole](https://www.luogu.com.cn/problem/P1444)
-- [最长前缀 Longest Prefix](https://www.luogu.com.cn/problem/P1470)
-- [魔族密码](https://www.luogu.com.cn/problem/P1481)
-- [村村通](https://www.luogu.com.cn/problem/P1536)
-- [三倍经验](https://www.luogu.com.cn/problem/P1544)
-- [四方定理](https://www.luogu.com.cn/problem/P1586)
-- [集合](https://www.luogu.com.cn/problem/P1621)
-- [邮递员送信](https://www.luogu.com.cn/problem/P1629)
-- [炸铁路](https://www.luogu.com.cn/problem/P1656)
-- [正方形计数](https://www.luogu.com.cn/problem/P1665)
-- [石子合并（弱化版）](https://www.luogu.com.cn/problem/P1775)
-- [Corn Maze S](https://www.luogu.com.cn/problem/P1825)
-- [素数密度](https://www.luogu.com.cn/problem/P1835)
-- [A % B Problem](https://www.luogu.com.cn/problem/P1865)
-- [EKO / 砍树](https://www.luogu.com.cn/problem/P1873)
-- [逆序对](https://www.luogu.com.cn/problem/P1908)
-- [郁闷的记者](https://www.luogu.com.cn/problem/P1960)
-- [无线通讯网](https://www.luogu.com.cn/problem/P1991)
-- [最小函数值](https://www.luogu.com.cn/problem/P2085)
-- [对角线](https://www.luogu.com.cn/problem/P2181)
-- [挖地雷](https://www.luogu.com.cn/problem/P2196)
-- [Cow Exhibition G](https://www.luogu.com.cn/problem/P2340)
-- [繁忙的都市](https://www.luogu.com.cn/problem/P2330)
-- [木材加工](https://www.luogu.com.cn/problem/P2440)
-- [信息传递](https://www.luogu.com.cn/problem/P2661)
-- [游戏预言](https://www.luogu.com.cn/problem/P2649)
 - [跳石头](https://www.luogu.com.cn/problem/P2678)
 - [搞清洁](https://www.luogu.com.cn/problem/P2684)
 - [编辑距离](https://www.luogu.com.cn/problem/P2758)

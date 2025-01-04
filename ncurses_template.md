@@ -36,7 +36,7 @@ int main() {
 - 每次添加完字符后用 `refresh()` 更新屏幕.
 - `endwin()` 相当于 `return 0`, 结束页面回到命令行. 如果程序意外退出光标什么的没有还原, 用 `tput reset` 重置光标.
 
-## 输出 `curs_addch(3X)` `curs_addstr(3X)`
+## 输出 `curs_addch(3X)` `curs_addstr(3X)` `curs_addwstr(3X)`
 `add` 相当于词根, 前缀 `w` 带 `*win`, `mv` 带坐标 (y,x) 行列. 下面两个带 `echo` 的表示一添加就调用 `refresh`.
 ```c
 int addch(const chtype ch);
@@ -58,6 +58,18 @@ int addnstr(const char *str, int n);
 int mvaddnstr(int y, int x, const char *str, int n);
 int mvwaddnstr(WINDOW *win, int y, int x, const char *str, int n);
 int waddnstr(WINDOW *win, const char *str, int n);
+```
+宽字符也是可以的：
+```c
+int addwstr(const wchar_t *wstr);
+int mvaddwstr(int y, int x, const wchar_t *wstr);
+int mvwaddwstr(WINDOW *win, int y, int x, const wchar_t *wstr);
+int waddwstr(WINDOW *win, const wchar_t *wstr);
+
+int addnwstr(const wchar_t *wstr, int n);
+int mvaddnwstr(int y, int x, const wchar_t *wstr, int n);
+int mvwaddnwstr(WINDOW *win, int y, int x, const wchar_t *wstr, int n);
+int waddnwstr(WINDOW *win, const wchar_t *wstr, int n);
 ```
  `n` 表示添加 `str` 的前 `n` 位, `n` 比 `str` 长度长时直接输出 `str`. 如:
 ```c
