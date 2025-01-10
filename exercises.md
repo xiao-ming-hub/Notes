@@ -171,6 +171,10 @@
 - [降雨量](luogu.p2471.md) 分类讨论
 - [阅览室](https://www.luogu.com.cn/problem/P1844)
 - [公交换乘](https://www.luogu.com.cn/problem/P5661)
+- [消棋子](https://www.luogu.com.cn/problem/P3341)
+  > - bfs 不要写假了，队列可能要开 $8N$，因为一个点可能 8 次重复入队。
+  > - `check` 里要判断 `couldrm`。
+  > - 取第 2 位是和 2 位与，取低 2 位是和 3 位与
 
 ## 构造
 - 周期相关

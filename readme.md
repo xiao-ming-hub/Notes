@@ -19,6 +19,7 @@
     - [棋盘 | 最短路/实现细节](luogu.p3956/doc.md)
     - [结构体 | 模拟/代码规范](luogu.p9754.md)
     - [降雨量 | 模拟/分类讨论](luogu.p2471.md)
+    - [消棋子 | 模拟](luogu.p3341.md)
     - [逻辑表达式 | 模拟 表达式解析](luogu.p8815.md)
     - [Cow Coupons G | 贪心/反悔](luogu.p3045.md)
     - [线段树 | 数论分块](luogu.p6025.md)
