@@ -8,8 +8,9 @@
 - [在命令提示符里显示分支名](git-ps1.md)
 - [ncurses 简要手册](ncurses-template.md)
 - [用分支维护自己的修改](git-rebase-change.md)
+- [安装 AUR 包的注意事项](aur-install.md)
 - 数理
-  - [排列组合 球盒问题 把 $n$ 个球放进 $m$ 个盒子的方案数]()
+  - [排列组合 球盒问题](box-and-ball.md)
   - [凸透镜成像规律](tu-tou-jing-cheng-xiang/doc.md)
 - manim
   - [如何在 Arch Linux 上安装 ManimGL](manim/install-on-archlinux.md)
