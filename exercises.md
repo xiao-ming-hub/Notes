@@ -9,7 +9,8 @@
   - [假期计划](https://www.luogu.com.cn/problem/P8817)
 - [LCA](https://www.luogu.com.cn/problem/P3379)
   - [货车运输](https://www.luogu.com.cn/problem/P1967) MST
-  - [Speaker](https://www.luogu.com.cn/problem/P11324) 观察到 (x,y)+(y,z) 可以转化成 (x,t)+2(t,y)+(t,z). 对于每个 t，预处理 (t,y) 最大的利润，用 LCA 求路径和+点权最大值即可（点权指的是预处理后的，不是输入的 c）。
+  - [Speaker](https://www.luogu.com.cn/problem/P11324) 观察到 $L(x,y)+L(y,z)$ 可以转化成 $L(x,t)+2L(t,y)+L(t,z)$。对于每个 $t$，预处理 $(t,y)$ 最大的利润，用 LCA 求路径和、点权最大值即可（点权指的是预处理后的，不是输入的 $c$）。
+  - [仓鼠找 sugar](https://www.luogu.com.cn/problem/P3398) $P=(x1,y1)$，$Q=(x2,y2)$，两条路径相交仅当 $\operatorname{lca}P\in Q$ 或 $\operatorname{lca}Q\in P$。判断点在路径上可以用距离算。
 - [连通性](connectivity/doc.md)
   - 差分约束
     - [糖果](https://www.luogu.com.cn/problem/P3275)
@@ -49,11 +50,11 @@
 - [Strange Cake Game](https://www.luogu.com.cn/problem/P11143) 2 人决策，先考虑后手，分析先手的策略。
 - [游戏预言](https://www.luogu.com.cn/problem/P2649)
   > 假设 J 总是把牌从大到小出，其余所有的牌都拿在一个人 F 手里，每次出 $(m-1)$ 张。如果 F 有牌能赢得这轮，剩下要出的 $(m-2$ 张牌拿最小的占位即可。
-  > 
+  >
   > 之后从大到小枚举每一张牌。对于 $i(1\le i\le mn)$ 号牌：
   > - 它不是 J 的牌，把它标记为 F 的牌。
   > - 它是 J 的牌。如果 F 的牌至少有 1 张能够压住 J，那么 F 总是应该选择压上。因为对于 F 的任意 2 张比 J 的这张大的牌，用哪张盖上 J 的这一张牌，另一张都可以在后续回合里继续创造胜利。
-  > 
+  >
   > 用桶存下 J 的每一张牌，从 $mn$ 到 1 反向枚举，如果是 F 的牌则加入储备牌库（$c\gets c+1$）；是 J 的就看看牌库有没有牌，如果有 $c\gets c-1$，否则 $a\gets a+1$。
 
 ## hash
@@ -99,7 +100,7 @@
     >
     > - $(u,i,j)$ 表示状态 $(u,i)$ 子树里，$j$ 个点在 1 组；
     > - $f/g$ 表示 $u$ 在/不在 1 组时的最小代价。
-    > 
+    >
     > 转移：设
     > $$\begin{aligned}
     > f' & = f(u,i+1,j) & g' & = g(u,i+1,j)\\
@@ -213,7 +214,8 @@
 - [小木棍](https://www.luogu.com.cn/problem/P1120)
 - [最大公约数](https://www.luogu.com.cn/problem/P7243) 纯粹的 BFS
 - [生日蛋糕](https://www.luogu.com.cn/problem/P1731) 经典剪枝，剪一下多 10 分。
-- [平面上的最接近点对](https://www.luogu.com.cn/problem/P1257) 
+- [平面上的最接近点对](https://www.luogu.com.cn/problem/P1257)
+- [骑士精神](https://www.luogu.com.cn/problem/P2324) IDA*，最后一次移动可以一步还原两个格子，记住不要只是 $z=2$ 时减一，是 $z\ge2$ 时都要减。
 
 ## 数学
 - 数论
